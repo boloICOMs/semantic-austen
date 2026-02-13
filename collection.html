@@ -7,15 +7,24 @@
     <title>The Collection | Semantic Austen</title>
     <meta name="description" content="Browse the digital collection of Jane Austen's works.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 
 <body>
     <nav>
         <a href="index.html" class="logo-container">
             <img src="img/logo.png" alt="Semantic Austen Logo">
-            <span class="logo-text">Semantic Austen</span>
+            <div class="logo-text">
+                <span>Semantic</span>
+                <span>Austen</span>
+            </div>
         </a>
-        <ul class="nav-links">
+        <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">the project</a></li>
             <li><a href="collection.html">the collection</a></li>
             <li><a href="annotation.html">annotation campaign</a></li>
@@ -24,30 +33,127 @@
 
     <main class="container fade-in">
         <section class="hero">
-            <h1>The Collection</h1>
-            <p>A curated repository of Austen's major works, digitally transcribed and structurally encoded for semantic
-                exploration.</p>
+            <h1>the Digital Collection</h1>
+            <p class="subtitle">A curated repository of Jane Austen's major works and fragments.</p>
         </section>
 
-        <article class="content">
-            <p>This collection includes complete digital editions of Jane Austen's novels, from <em>Sense and
-                    Sensibility</em> to <em>Persuasion</em>, each prepared for granular semantic analysis.</p>
-        </article>
+        <section class="search-section">
+            <input type="text" class="search-bar" placeholder="Search the collection...">
+        </section>
+
+        <section class="collection-grid">
+            <!-- Card 1: Persuasion -->
+            <a href="persuasion.html" class="collection-card">
+                <div class="card-image-wrapper">
+                    <img src="img/collection/persuasion.jpg"
+                        alt="Persuasion">
+                </div>
+                <div class="card-caption">
+                    <h4>Persuasion</h4>
+                </div>
+            </a>
+
+            <!-- Card 2: Pride and Prejudice -->
+            <a href="#" class="collection-card">
+                <div class="card-image-wrapper">
+                    <img src="img/collection/juvenilia.jpg"
+                        alt="Juvenilia">
+                </div>
+                <div class="card-caption">
+                    <h4>Juvenilia</h4>
+                </div>
+            </a>
+
+            <!-- Card 4: Emma -->
+            <a href="#" class="collection-card">
+                <div class="card-image-wrapper">
+                    <img src="img/collection/thewatsons.jpg"
+                        alt="The Watsons">
+                </div>
+                <div class="card-caption">
+                    <h4>The Watsons</h4>
+                </div>
+            </a>
+            
+            <!-- Card 3: Sense and Sensibility -->
+            <a href="#" class="collection-card">
+                <div class="card-image-wrapper">
+                    <img src="img/collection/ladysusan.jpg"
+                        alt="Lady Susan">
+                </div>
+                <div class="card-caption">
+                    <h4>Lady Susan</h4>
+                </div>
+            </a>
+
+            <!-- Card 5: Mansfield Park -->
+            <a href="#" class="collection-card">
+                <div class="card-image-wrapper">
+                    <img src="img/collection/susan.jpg"
+                        alt="Susan">
+                </div>
+                <div class="card-caption">
+                    <h4>Susan</h4>
+                </div>
+            </a>
+
+            <!-- Card 6: Sanditon -->
+            <a href="#" class="collection-card">
+                <div class="card-image-wrapper">
+                    <img src="img/collection/sanditon.jpg"
+                        alt="Sanditon">
+                </div>
+                <div class="card-caption">
+                    <h4>Sanditon</h4>
+                </div>
+            </a>
+
+            <!-- Card 7: The Juvenilia -->
+            <a href="#" class="collection-card">
+                <div class="card-image-wrapper">
+                    <img src="img/collection/opinions.jpg"
+                        alt="Opinions">
+                </div>
+                <div class="card-caption">
+                    <h4>Opinions of Mansfield Park, Opinions of Emma</h4>
+                </div>
+            </a>
+
+            <!-- Card 8: Northanger Abbey -->
+            <a href="#" class="collection-card">
+                <div class="card-image-wrapper">
+                    <img src="img/collection/profits.jpg"
+                        alt="Profits">
+                </div>
+                <div class="card-caption">
+                    <h4>Profits of my Novels</h4>
+                </div>
+            </a>
+
+            <!-- Card 9: Lady Susan -->
+            <a href="#" class="collection-card">
+                <div class="card-image-wrapper">
+                    <img src="img/collection/plan.jpg"
+                        alt="Plan">
+                </div>
+                <div class="card-caption">
+                    <h4>Plan of a Novel</h4>
+                </div>
+            </a>
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-column">
-                <a href="https://github.com/" target="_blank" class="github-link">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-            <div class="footer-separator">|</div>
-            <div class="footer-column">
-                <p class="copyright">&copy; 2026 Semantic Austen</p>
-            </div>
+            <a href="https://github.com/boloICOMs/semantic-austen" target="_blank" class="github-link">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <p class="copyright">&copy; 2026 Semantic Austen</p>
+            <p class="license-text">Distributed under a <a href="https://creativecommons.org/licenses/by/4.0/"
+                    target="_blank">CC BY 4.0</a> license.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

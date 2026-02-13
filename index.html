@@ -4,19 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Project | Semantic Austen</title>
+    <title>Semantic Austen</title>
     <meta name="description"
         content="Semantic Austen: A digital humanities project exploring Jane Austen's works through semantic analysis.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 
 <body>
     <nav>
         <a href="index.html" class="logo-container">
             <img src="img/logo.png" alt="Semantic Austen Logo">
-            <span class="logo-text">Semantic Austen</span>
+            <div class="logo-text">
+                <span>Semantic</span>
+                <span>Austen</span>
+            </div>
         </a>
-        <ul class="nav-links">
+        <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">the project</a></li>
             <li><a href="collection.html">the collection</a></li>
             <li><a href="annotation.html">annotation campaign</a></li>
@@ -29,7 +38,7 @@
             <span class="subtitle">An annotated Digital Library</span>
 
             <div class="search-container">
-                <input type="text" class="search-bar" placeholder="search">
+                <input type="text" class="search-bar" placeholder="Search the collection...">
             </div>
 
             <div class="collection-link-wrapper">
@@ -61,13 +70,15 @@
                 <h3>About</h3>
                 <p>Semantic Austen is a research-driven project focused on the intersections of technology and literary
                     studies. By building a robust digital infrastructure for Jane Austen's works, we provide a
-                    foundation for new critical insights and computational discoveries.</p>
+                    foundation for new critical insights and computational discoveries.<br>
+                    The report for the project can be downloaded <a href="">here</a>.</p>
             </div>
             <div class="prefooter-team">
                 <h3>Team</h3>
                 <ul class="team-list">
                     <li><a href="https://github.com/nicoldamelio" target="_blank">Nicol D'amelio</a></li>
-                    <li><a href="https://github.com/https://github.com/MariaJGamboa" target="_blank">Maria Juliana Gamboa Nivia</a></li>
+                    <li><a href="https://github.com/https://github.com/MariaJGamboa" target="_blank">Maria Juliana
+                            Gamboa Nivia</a></li>
                     <li><a href="https://github.com/Maryamdadras" target="_blank">Maryam Dadrasrazi</a></li>
                 </ul>
             </div>
@@ -76,17 +87,15 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-column">
-                <a href="https://github.com/" target="_blank" class="github-link">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-            <div class="footer-separator">|</div>
-            <div class="footer-column">
-                <p class="copyright">&copy; 2026 Semantic Austen</p>
-            </div>
+            <a href="https://github.com/boloICOMs/semantic-austen" target="_blank" class="github-link">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <p class="copyright">&copy; 2026 Semantic Austen</p>
+            <p class="license-text">Distributed under a <a href="https://creativecommons.org/licenses/by/4.0/"
+                    target="_blank">CC BY 4.0</a> license.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

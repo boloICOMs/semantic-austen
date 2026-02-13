@@ -4,49 +4,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Semantic Austen</title>
-    <meta name="description" content="Learn more about the Semantic Austen project and the annotation methodology.">
+    <title>Annotation Campaign | Semantic Austen</title>
+    <meta name="description" content="Explore the annotation campaign and AI evaluation results for Semantic Austen.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <nav>
         <a href="index.html" class="logo-container">
             <img src="img/logo.png" alt="Semantic Austen Logo">
-            <span class="logo-text">Semantic Austen</span>
+            <div class="logo-text">
+                <span>Semantic</span>
+                <span>Austen</span>
+            </div>
         </a>
-        <ul class="nav-links">
+        <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">the project</a></li>
             <li><a href="collection.html">the collection</a></li>
-            <li><a href="annotation.html">annotation campaign</a></li>
+            <li><a href="annotation.html" class="active">annotation campaign</a></li>
         </ul>
     </nav>
 
     <main class="container fade-in">
-        <section class="hero">
-            <h1>About the Annotation</h1>
-            <p>Methodological transparency and the semantic framework underlying our analysis.</p>
+        <section class="hero no-subtitle">
+            <h1>Annotation Campaign</h1>
         </section>
 
-        <article class="content">
-            <p>Our annotation process involves multi-layered semantic tagging, identifying social relationships,
-                narrative perspective shifts, and characteristic linguistic markers in Austen's prose.</p>
-        </article>
+        <!-- Task Definition -->
+        <section class="content-section">
+            <h2>Task Definition</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Our primary goal is to establish a rigorous framework for transcribing and
+                annotating Jane Austen's fiction manuscripts.</p>
+        </section>
+
+        <!-- Context -->
+        <section class="content-section">
+            <h2>Context</h2>
+            <p>The academic landscape of digital humanities requires precise tools for manuscript analysis. Semantic
+                Austen sits at the intersection of literary history and computational linguistics, seeking to preserve
+                the nuance of Austen's original drafts while enabling advanced semantic search and structural modeling.
+            </p>
+        </section>
+
+        <!-- Corpus Selection -->
+        <section class="content-section">
+            <h2>Corpus Selection</h2>
+            <p>We have selected a representative sample from Austen's later works, including drafts of
+                <em>Persuasion</em> and <em>Sanditon</em>. These manuscripts provide a rich variety of handwriting
+                styles, revisions, and structural complexity, making them ideal for testing the limits of automated
+                transcription and manual annotation.
+            </p>
+        </section>
+
+        <!-- Annotation Guidelines -->
+        <section class="content-section">
+            <h2>Annotation Guidelines</h2>
+            <p>Our guidelines have been developed to ensure consistency across the research team and various AI models.
+                We focus on two primary dimensions of the manuscript: layout and text.</p>
+
+            <div class="subsection">
+                <h3>Layout Guidelines</h3>
+                <p>These guidelines specify how to handle marginalia, line breaks, indentations, and vertical spacing.
+                    Every blot and dash is recorded to maintain the spatial integrity of the original parchment.</p>
+            </div>
+
+            <div class="subsection">
+                <h3>Text Guidelines</h3>
+                <p>Textual annotation focuses on diplomatic transcription—preserving original spelling, punctuation, and
+                    revisions. We use specialized tags for deletions, insertions, and uncertain readings.</p>
+            </div>
+        </section>
+
+        <!-- Annotation Platform -->
+        <section class="content-section">
+            <h2>Annotation Platform</h2>
+            <p>The campaign utilized a customized WebApp platform built on top of the Transkribus API and TEI-XML
+                standards. This allowed annotators to view high-resolution IIIF images directly alongside their
+                transcription workspace.</p>
+        </section>
+
+        <!-- Pilot -->
+        <section class="content-section">
+            <h2>Pilot</h2>
+            <p>A pilot study was conducted on a single chapter of <em>Persuasion</em>. This phase allowed us to refine
+                our guidelines and identify common pitfalls in the transcription of Austen's unique cursive hand,
+                particularly her use of the long 's' and complex abbreviations.</p>
+        </section>
+
+        <!-- Campaign -->
+        <section class="content-section">
+            <h2>Campaign</h2>
+            <p>The full campaign involved a team of six expert annotators over a period of three months. More than 400
+                manuscript pages were transcribed and verified, creating a gold-standard dataset for the training of our
+                semantic models.</p>
+        </section>
+
+        <!-- Evaluation of the Results -->
+        <section class="content-section evaluation-section">
+            <div class="section-intro">
+                <h2>Evaluation of the Results</h2>
+                <p>In this phase, we compared the outputs of two different Large Language Models (LLM-A and LLM-B)
+                    against
+                    our gold-standard manual transcriptions. Use the viewer below to navigate through the performance
+                    samples.</p>
+            </div>
+
+            <div class="comparison-viewer">
+                <div class="transcription-panel ai-panel" id="ai-1-panel">
+                    <span class="panel-label">AI Model Alpha</span>
+                    <div class="transcription-text" id="ai-1-text">
+                        <!-- Content via JS -->
+                    </div>
+                </div>
+
+                <div class="manuscript-panel">
+                    <div class="manuscript-frame">
+                        <img id="eval-img" src="" alt="Manuscript Page">
+                    </div>
+                    <div class="page-nav">
+                        <button id="eval-prev" class="btn-circle" disabled><i class="fas fa-chevron-left"></i></button>
+                        <span class="page-indicator">Page <span id="eval-page-num">1</span> / 6</span>
+                        <button id="eval-next" class="btn-circle"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="transcription-panel ai-panel" id="ai-2-panel">
+                    <span class="panel-label">AI Model Beta</span>
+                    <div class="transcription-text" id="ai-2-text">
+                        <!-- Content via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusions -->
+        <section class="content-section">
+            <h2>Conclusions</h2>
+            <p>The results demonstrate that while AI models are becoming increasingly proficient at basic transcription,
+                the preservation of complex layout features and diplomatic nuances still requires human expertise. Our
+                hybrid approach ensures both scale and academic precision for the Semantic Austen collection.</p>
+        </section>
     </main>
 
-    <footer>
+    <footer class="fade-in">
         <div class="footer-content">
-            <div class="footer-column">
-                <a href="https://github.com/" target="_blank" class="github-link">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-            <div class="footer-separator">|</div>
-            <div class="footer-column">
-                <p class="copyright">&copy; 2026 Semantic Austen</p>
-            </div>
+            <a href="https://github.com/boloICOMs/semantic-austen" target="_blank" class="github-link">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <p class="copyright">&copy; 2026 Semantic Austen</p>
+            <p class="license-text">Distributed under a <a href="https://creativecommons.org/licenses/by/4.0/"
+                    target="_blank">CC BY 4.0</a> license.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
