@@ -948,27 +948,21 @@ footer {
     transition: all 0.3s ease;
 }
 
-.btn-iiif {
-    background-color: transparent;
-    border: 2px solid var(--cta-rose);
-    color: var(--cta-rose);
-}
-
-.btn-iiif:hover {
-    background-color: var(--cta-rose);
-    color: white;
-}
-
+.btn-iiif,
 .btn-xml {
-    background-color: transparent;
-    border: 2px solid var(--accent-brown);
-    color: var(--accent-brown);
+    background-color: var(--accent-slate);
+    border: 1px solid var(--accent-slate);
+    color: var(--brand-navy);
 }
 
+.btn-iiif:hover,
 .btn-xml:hover {
-    background-color: var(--accent-brown);
-    color: var(--bg-pearl);
+    background-color: transparent;
+    color: var(--accent-slate);
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
+
 
 /* Metadata Section */
 .metadata-section {
