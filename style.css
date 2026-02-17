@@ -1225,16 +1225,19 @@ footer {
     display: flex;
     gap: 40px;
     margin-top: 50px;
-    align-items: flex-start;
+    align-items: stretch;
+    /* Match height of all panels */
     background-color: var(--secondary-olive);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--accent-brown);
+    max-height: 850px;
+    /* Constrain viewer height for scrolling */
 }
 
 .transcription-panel {
-    flex: 1;
+    flex: 1.2;
     background: var(--accent-slate);
     padding: 25px;
     border-radius: 8px;
@@ -1242,6 +1245,9 @@ footer {
     min-height: 400px;
     position: relative;
     color: var(--brand-navy);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .transcription-panel p,
@@ -1266,16 +1272,35 @@ footer {
     font-style: italic;
     color: var(--brand-navy);
     transition: opacity 0.3s ease;
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+/* Custom scrollbar for better aesthetics */
+.ai-panel .transcription-text::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ai-panel .transcription-text::-webkit-scrollbar-track {
+    background: rgba(19, 39, 63, 0.05);
+    border-radius: 3px;
+}
+
+.ai-panel .transcription-text::-webkit-scrollbar-thumb {
+    background: rgba(19, 39, 63, 0.2);
+    border-radius: 3px;
 }
 
 .manuscript-panel {
     flex: 2;
-    /* Increased priority for manuscript image */
+    display: flex;
+    flex-direction: column;
 }
 
 .manuscript-frame {
     width: 100%;
-    aspect-ratio: 3/4;
+    flex: 1;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);

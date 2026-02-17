@@ -177,8 +177,81 @@ document.addEventListener('DOMContentLoaded', () => {
         const evalPages = [
             {
                 img: "img/eval/p.1.jpg",
-                ai1: "<p>My dear Cassandra, You will be surprised to hear that I am once again at my desk. The weather has been most unpropitious for walking...</p>",
-                ai2: "<p>My dear Cassandra, You will be surprised to her that I am once again at my desk. The wether has been most unpropitious for walking...</p>"
+                ai1: `<p>all the changes of each at the<br>
+encert, to be miserable by this<br>
+morning's circumstantial report, to<br>
+be non, morr happy than Languy<br>
+could expreſs, or any heart but his<br>
+There was timed<br>
+own be capable<br>
+f<br>
+was all this to be said — & with<br>
+as en<br>
+such Interrurptions only<br>
+commenelatinn<br>
+hanced the chaim of comvariate<br>
+:and Bath id. scarcely contain on<br>
+at once &<br>
+ep<br>
+other<br>
+apeings mon rationally & so<br>
+raptusovely happy as duving that<br>
+event occupied the Sopha of of<br>
+Mrs . Crofts Drawing room in GaySt<br>
+Capt.W. — had taken care t o<br>
+meet the Adml. — as he returned info<br>
+the house, to satisfy, &<br>
+:dearner to sclence him on the<br>
+subject of his enquin Mr . E.–<br>
+"Kallyuch; — and the minate delicay<br>
+nature<br>
+of the Admirals goodhun<br>
+kept him from saying another<br>
+and on the subject to Anne —<br>
+He was quite uncerned lest he<br>
+might have been giving her<br>
+prain by touching a tender part<br>
+who could say — — She might be<br>
+liking her Cousin, better than<br>
+he liked her." — And indeed</p>`,
+                ai2: `<p>all the changes of each at the<br>
+concert, to be miserable by this<br>
+morning’s circumstantial report, to<br>
+be now, more happy than language<br>
+could express, or any heart but hers<br>
+may be capable of. ^x^ Then was time<br>
+^for^ all this to be [del: said] — With<br>
+such interruptions only as en-<br>
+hanced the charm of ^the communication^<br>
+[del: — and Bath c<sup>d</sup>. scarcely contain any]<br>
+[del: other two] beings ^at once^ so rationally & so<br>
+rapturously happy as during that<br>
+event. occupied the Sopha. of the<br>
+Adml. Croft’s Drawing room in Gay St.<br>
+Capt. W. — had taken care to<br>
+meet the Adml. as he returned into<br>
+the house, to satisfy [del: himself] ^him^ [del: as to:]<br>
+[del: them — to silence them on the] ^as to the^<br>
+subject of his enquiring [del: Mr. E —] ^at^<br>
+Kellynch; — and the [del: private] ^natural^ delicacy<br>
+of the Admiral’s good-[ins: natured]-humour<br>
+kept him from saying another<br>
+word on the subject to Anne. —<br>
+He was quite concerned lest he<br>
+might have been giving her<br>
+pain by touching a tender part.<br>
+Who could say? — She might be<br>
+liking her Cousin, better than<br>
+he liked her.</p>
+<div class="transcription-key">
+<strong>Transcription Key:</strong><br>
+[del: word] : Text crossed out in the original.<br>
+^word^ / [ins: word] : Text inserted above the line or in the margin.<br>
+x : Represents a cross-reference mark or insertion indicator used by the author.<br>
+c<sup>d</sup> : Preservation of the author's superscript abbreviation for "could".<br>
+& : Preservation of the ampersand as written.<br>
+— : Preservation of the author's characteristic long dashes.
+</div>`
             },
             {
                 img: "img/eval/p.2.jpg",
