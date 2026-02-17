@@ -9,17 +9,14 @@
     /* Mystic Navy */
     --action-red: #4E0B0B;
     /* Red Inferno */
-    --accent-slate: #64748B;
+    --accent-slate: #A8B8CF;
     /* Slate Blue */
-    --accent-chocolate: #3E2723;
-    /* Chocolate Brown */
 
     /* Standard UI Variable Mapping */
     --bg-color: var(--bg-pearl);
     --surface-color: var(--bg-pearl);
     --primary-color: var(--bg-pearl);
     --secondary-color: var(--accent-slate);
-    --accent-color: var(--accent-chocolate);
     --text-color: var(--bg-pearl);
     --cta-color: var(--action-red);
 
@@ -52,6 +49,131 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* Page Specific Overrides */
+.collection-page {
+    background-color: var(--bg-pearl);
+    color: var(--brand-navy);
+}
+
+.collection-page h1,
+.collection-page h2,
+.collection-page h3,
+.collection-page h4,
+.collection-page h5,
+.collection-page h6 {
+    color: var(--brand-navy) !important;
+}
+
+.collection-page .hero .subtitle {
+    color: var(--brand-navy);
+    opacity: 0.8;
+}
+
+.collection-page .collection-card h4:hover {
+    color: var(--action-red) !important;
+}
+
+.collection-page .search-bar {
+    background-color: var(--accent-slate);
+    color: var(--brand-navy);
+    border: 1px solid rgba(19, 39, 63, 0.1);
+}
+
+.collection-page .search-bar::placeholder {
+    color: rgba(19, 39, 63, 0.5);
+}
+
+.collection-page .collection-link {
+    color: var(--brand-navy);
+}
+
+/* Item Page Specific Overrides */
+.item-page {
+    background-color: var(--bg-pearl);
+    color: var(--brand-navy);
+}
+
+.item-page h1,
+.item-page h2,
+.item-page h4,
+.item-page h5,
+.item-page h6 {
+    color: var(--brand-navy) !important;
+}
+
+.item-page .hero .subtitle {
+    color: var(--brand-navy);
+    opacity: 0.8;
+}
+
+.item-page .manuscript-viewer {
+    background-color: var(--brand-navy);
+    padding: 20px;
+    border-radius: 8px;
+    color: var(--bg-pearl);
+}
+
+.item-page .manuscript-image-wrapper {
+    background-color: rgba(233, 225, 211, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.item-page .transcription-box {
+    background-color: var(--brand-navy);
+    color: var(--bg-pearl);
+    border: 1px solid rgba(233, 225, 211, 0.1);
+}
+
+.item-page .transcription-title {
+    color: var(--bg-pearl);
+    border-bottom-color: rgba(233, 225, 211, 0.2);
+}
+
+.item-page .transcription-content {
+    color: var(--bg-pearl);
+}
+
+.item-page .btn-page {
+    background-color: var(--bg-pearl);
+    color: var(--brand-navy);
+}
+
+.item-page .btn-page:hover:not(:disabled) {
+    background-color: var(--accent-slate);
+}
+
+.item-page .btn-page:disabled {
+    background-color: rgba(233, 225, 211, 0.2);
+    color: rgba(233, 225, 211, 0.4);
+}
+
+.item-page .metadata-section {
+    background-color: var(--accent-slate);
+    border: none;
+    box-shadow: 0 10px 30px rgba(168, 184, 207, 0.2);
+}
+
+.item-page .metadata-label,
+.item-page .metadata-value {
+    color: var(--brand-navy);
+}
+
+.item-page .metadata-item {
+    border-bottom-color: rgba(19, 39, 63, 0.2);
+}
+
+.item-page .media-card {
+    background-color: var(--action-red);
+    border: 1px solid rgba(19, 39, 63, 0.1);
+}
+
+.item-page .media-title,
+.item-page .media-type {
+    color: var(--bg-pearl);
+}
+
+
 
 main {
     flex: 1 1 auto;
@@ -353,7 +475,7 @@ nav.nav-hidden {
 }
 
 .collection-link:hover {
-    color: var(--accent-color);
+    color: var(--accent-slate);
     opacity: 1;
     transform: translateX(5px);
 }
@@ -392,7 +514,19 @@ nav.nav-hidden {
 }
 
 /* Button Styling */
-.btn-campaign,
+.btn-campaign {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: var(--accent-slate);
+    color: var(--brand-navy);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-slate);
+}
+
 .btn-primary {
     display: inline-block;
     padding: 16px 32px;
@@ -406,7 +540,15 @@ nav.nav-hidden {
     border: 1px solid var(--action-red);
 }
 
-.btn-campaign:hover,
+.btn-campaign:hover {
+    background-color: transparent;
+    color: var(--accent-slate);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(168, 184, 207, 0.2);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 .btn-primary:hover {
     background-color: transparent;
     color: var(--action-red);
@@ -419,7 +561,7 @@ nav.nav-hidden {
 .btn-campaign:active,
 .btn-primary:active {
     transform: translateY(0);
-    box-shadow: 0 2px 5px rgba(78, 11, 11, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
@@ -489,17 +631,34 @@ nav.nav-hidden {
     color: var(--brand-navy);
     transition: color 0.3s ease;
     font-weight: 500;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.team-list a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--action-red);
+    transition: width 0.3s ease;
 }
 
 .team-list a:hover {
-    color: var(--accent-color);
+    color: var(--action-red);
+}
+
+.team-list a:hover::after {
+    width: 100%;
 }
 
 /* Footer Section Redesign */
 footer {
     width: 100%;
     padding: 40px 0;
-    background-color: var(--accent-chocolate);
+    background-color: var(--bg-pearl);
     border-top: 1px solid var(--brand-navy);
 }
 
@@ -509,47 +668,45 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    color: var(--bg-pearl);
+    color: var(--brand-navy);
     text-align: center;
 }
 
 .github-link {
-    color: var(--bg-pearl);
+    color: var(--brand-navy);
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     display: inline-flex;
     margin-bottom: 5px;
 }
 
 .github-link:hover {
-    color: white;
+    color: var(--action-red);
 }
 
 .copyright {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--bg-pearl);
+    color: var(--brand-navy);
     margin: 0;
 }
 
 .license-text {
     font-size: 0.85rem;
     font-weight: 300;
-    color: rgba(233, 225, 211, 0.8);
+    color: rgba(19, 39, 63, 0.8);
     margin: 0;
 }
 
 .license-text a {
     color: inherit;
-    text-decoration: underline;
-    text-decoration-color: rgba(233, 225, 211, 0.3);
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .license-text a:hover {
-    color: white;
+    color: var(--action-red);
     text-decoration: underline;
-    text-decoration-color: white;
+    text-decoration-color: var(--action-red);
 }
 
 /* Animations */
@@ -810,7 +967,7 @@ footer {
 
 .btn-xml:hover {
     background-color: var(--accent-brown);
-    color: white;
+    color: var(--bg-pearl);
 }
 
 /* Metadata Section */
@@ -880,7 +1037,7 @@ footer {
 
 .media-card {
     min-width: 300px;
-    background-color: var(--bg-pearl);
+    background-color: var(--action-red);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
@@ -1084,7 +1241,7 @@ footer {
 
 .transcription-panel {
     flex: 1;
-    background: white;
+    background: var(--accent-slate);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -1092,6 +1249,12 @@ footer {
     position: relative;
     color: var(--brand-navy);
 }
+
+.transcription-panel p,
+.transcription-panel .transcription-text {
+    color: var(--brand-navy);
+}
+
 
 .panel-label {
     display: block;
@@ -1122,7 +1285,7 @@ footer {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    background-color: #f4eee1;
+    background-color: var(--action-red);
     margin-bottom: 20px;
 }
 
@@ -1156,7 +1319,7 @@ footer {
 }
 
 .btn-circle:hover:not(:disabled) {
-    background-color: var(--accent-color);
+    background-color: var(--accent-slate);
     transform: scale(1.1);
 }
 
