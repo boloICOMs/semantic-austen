@@ -215,7 +215,7 @@ nav.nav-hidden {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 25px;
     /* Reduced gap to attach text closer to logo */
     text-decoration: none;
     color: var(--brand-navy);

@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (manuscriptImg && transcriptionText) {
         const manuscriptPages = [
             {
+                pageNum: 1,
                 img: "img/persuasion/p.1.jpg",
                 transcription: `
                     <p>My dear Cassandra,</p>
@@ -98,13 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `
             },
             {
-                img: "img/persuasion/p.2.jpg",
-                transcription: `
-                    <p>The arrival of Captain Wentworth has thrown the neighborhood into a state of considerable excitement. It is strange to see him again after so long, yet he appears as vigorous and determined as ever. I often wonder if he remembers our brief acquaintance at Kellynch Hall with any fondness, or if the years have erased all traces of those feelings.</p>
-                    <p>My father, of course, is entirely consumed by his own consequence and the mounting debts that threaten our position. He speaks of retrenchment as if it were a minor inconvenience rather than a looming catastrophe.</p>
-                `
-            },
-            {
+                pageNum: 3,
                 img: "img/persuasion/p.3.jpg",
                 transcription: `
                     <p>Lyme Regis provided a much-needed change of scene. The sea air is bracing, and the company of the Harvilles is a true relief from the endless social posturing of Bath. Louisa's unfortunate accident on the Cobb has cast a shadow over our stay, yet it has also revealed much about the character of those around us.</p>
@@ -112,14 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 `
             },
             {
-                img: "img/persuasion/p.4.jpg",
+                pageNum: 14,
+                img: "img/persuasion/p.14.jpg",
                 transcription: `
                     <p>Bath is as crowded and superficial as ever. I find myself longing for the simple pleasures of Uppercross, despite the frequent complaints of my sisters. The social whirl here is exhausting, and the constant attention to rank and fortune is wearying to the soul.</p>
                     <p>I saw Mr. Elliot in the Pump Room today. He is a man of undeniable charm and elegance, yet there is something about his character that remains opaque to me. I cannot quite trust the ease with which he navigates these social waters.</p>
                 `
             },
             {
-                img: "img/persuasion/p.5.jpg",
+                pageNum: 15,
+                img: "img/persuasion/p.15.jpg",
                 transcription: `
                     <p>I can no longer listen in silence. I must speak to you by such means as are within my reach. You pierce my soul. I am half agony, half hope. Tell me not that I am too late, that such precious feelings are gone for ever. I offer myself to you again with a heart even more your own than when you almost broke it, eight years and a half ago.</p>
                     <p>I have loved none but you. Unjust I may have been, weak and resentful I have been, but never inconstant. You alone have brought me to Bath. For you alone, I think and plan. Have you not seen this? Can you fail to have understood my wishes?</p>
@@ -137,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = manuscriptPages[currentManuscriptPage];
                 manuscriptImg.src = data.img;
                 transcriptionText.innerHTML = data.transcription;
-                if (pageNumDisplay) pageNumDisplay.innerText = currentManuscriptPage + 1;
+                if (pageNumDisplay) pageNumDisplay.innerText = data.pageNum;
 
                 manuscriptImg.style.opacity = 1;
                 transcriptionText.style.opacity = 1;
