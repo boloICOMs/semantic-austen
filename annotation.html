@@ -126,24 +126,35 @@
         <!-- Campaign -->
         <section class="content-section">
             <h2>Campaign</h2>
-            <p>The full campaign involved a team of six expert annotators over a period of three months. More than 400
-                manuscript pages were transcribed and verified, creating a gold-standard dataset for the training of our
-                semantic models.</p>
+            <p>The campaign began annotating the pilot (50 pages and 8570 words) with the transcriptions of the SDE. as authoritative and labeled as ground truth. We trained our first model selecting 10% as the validation set obtaining a Character Error Rate (CER) of 17.03%.  After this first training model we realized that it was not what we expected and decided to keep this as a pilot and a starting point. </p>
+            <p>Consequently we decided to retrain the model, making a “fine-tuning” which meant re-train our model with a base-model (our pilot) and add a fine-tunned set of a small set of annotated pages to make the corpus bigger and get a higher  accuracy of the model. Thus we increased the number to 68 annotated pages and obtained a CER  of 16,47%.</p>
+            <p>However we weren’t content with the results, thus  we performed an additional “fine-tuning” with the <i>Transkribus English Handwriting M3</i> based model, trained on English handwriting of 18-20th cent,  however the CER increased at 18% due to overfitting.</p>
+            <p>Therefore, to avoid this, we did one last modification to the parameters to train our model. We increased the percentage of pages used for the validation, from 10% to 16%, using the same base model and epochs number (100), and we finally reached a CER of 10,11%.</p><br>
+            <p>The graph obtained is the following:</p>
+            <img>
+            <p>Character Error Rate (CER) is  the ratio of characters that have been transcribed incorrectly by the Text Recognition model. <br>               The learning curve signifies the accuracy of our model: the y-axis is defined as “Accuracy in CER” and is indicated in percentage, The x-axis instead is defined as “Epochs”.</p>
         </section>
 
         <!-- Evaluation of the Results -->
         <section class="content-section evaluation-section">
             <div class="section-intro">
                 <h2>Evaluation of the Results</h2>
-                <p>In this phase, we compared the outputs of two different Large Language Models (LLM-A and LLM-B)
-                    against
-                    our gold-standard manual transcriptions. Use the viewer below to navigate through the performance
-                    samples.</p>
+                <p>Our outcome CER of 10.11%, is considered highly functional, since results of 10% or under are considered very efficient. Our model allows a fast and usable application to our SDL since it produces reliable base text that requires minor manual intervention by the recurring complex deletions with corrections.</p>
+                
+                <div class="subsection">
+                    <h3>Comparison: Gemini OCR to Transkribus</h3>
+                    <p>After thoughtful consideration on the capabilities of our HTR model created by ourselves on just Jane Austen’s manuscripts in Transksribus we wanted to see the proficiency of others OCRs.  We tested Gemini 3 flash OCR, to understand the efficiency of it by providing just the images without giving any context of the text inside the images.</p>
+                    <p>To compare the accuracy of Gemini OCR against what our HTR model with Transkribus is able to do, we took 6 new pages between the novels ( 2 from <i>Juvenilia</i>, 2 from <I>The Watsons</i> and  2 from <i>Persuasion</i>), these pages were not used in the training model.  To compare results we gave these pages to Gemini as well to our HTR model of Transkribus to perform text recognition. </p> </br>
+                    <p></p>
+                    <p><b>Gemini</b>: gave exceptional results, since it was able to retrieve the text from the images while it understood the provenance of the text, meaning that it understood that they were Jane Austen texts, and identified the specific part of the novel. Provided highly accurate if not perfect text recognition following a diplomatic approach, handling layout, cancellations and superscript corrections. </p> <br>
+                    <p><b>Transkribus</b>: was very accurate, it still struggled with the constant cancellations and corrections done by the author, and even in one page it did not understand where the text began missing a part of the text. Therefore our HTR model is very good yet not perfect.</p>
+                
+                </div>
             </div>
 
             <div class="comparison-viewer">
                 <div class="transcription-panel ai-panel" id="ai-1-panel">
-                    <span class="panel-label">AI Model Alpha</span>
+                    <span class="panel-label">Transkribus HTR model</span>
                     <div class="transcription-text" id="ai-1-text">
                         <!-- Content via JS -->
                     </div>
@@ -161,7 +172,7 @@
                 </div>
 
                 <div class="transcription-panel ai-panel" id="ai-2-panel">
-                    <span class="panel-label">AI Model Beta</span>
+                    <span class="panel-label">Gemini</span>
                     <div class="transcription-text" id="ai-2-text">
                         <!-- Content via JS -->
                     </div>
@@ -172,9 +183,8 @@
         <!-- Conclusions -->
         <section class="content-section">
             <h2>Conclusions</h2>
-            <p>The results demonstrate that while AI models are becoming increasingly proficient at basic transcription,
-                the preservation of complex layout features and diplomatic nuances still requires human expertise. Our
-                hybrid approach ensures both scale and academic precision for the Semantic Austen collection.</p>
+            <p>Ultimately taking into consideration all the work done and analysis performed, the model that we created is a very good starting point to what concerns an annotation campaign and performed a text recognition of handwritten manuscripts with difficult corrections and layout. Nevertheless we realized that an LLM such as Gemini that is trained with thousands of texts have great performances and the results are almost perfect compared to what our small model can do. </p>
+            <p>Therefore for the construction of a Semantic Digital Library the use of an LLM with OCR will get better results that our model done in Traskribus, yet this annotation campaign is just a starting point of what can be done in the future and the work we could create for our SDL <b><i>Semantic Austen</i></b>.</p>
         </section>
     </main>
 
