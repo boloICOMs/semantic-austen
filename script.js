@@ -242,41 +242,288 @@ might have been giving her<br>
 pain by touching a tender part.<br>
 Who could say? — She might be<br>
 liking her Cousin, better than<br>
-he liked her.</p>
-<div class="transcription-key">
-<strong>Transcription Key:</strong><br>
-[del: word] : Text crossed out in the original.<br>
-^word^ / [ins: word] : Text inserted above the line or in the margin.<br>
-x : Represents a cross-reference mark or insertion indicator used by the author.<br>
-c<sup>d</sup> : Preservation of the author's superscript abbreviation for "could".<br>
-& : Preservation of the ampersand as written.<br>
-— : Preservation of the author's characteristic long dashes.
-</div>`
+he liked her. And indeed,</p>`
             },
             {
                 img: "img/eval/p.2.jpg",
-                ai1: "<p>The arrival of Captain Wentworth has thrown the neighborhood into a state of considerable excitement. It is strange to see him again after so long...</p>",
-                ai2: "<p>The arrival of Captrin Wentwrth has thrown the neighborhood into a state of considerble excitement. It is strange to se him again after so long...</p>"
+                ai1: `<p>upon recollection, it they have<br>
+many at all it was<br>
+ave<br>
+been<br>
+tha<br>
+beef t<br>
+I should thei<br>
+sclosed<br>
+ao<br>
+whe t<br>
+of oner<br>
+on<br>
+When the Evenf. was<br>
+it is probable that the Adml.<br>
+received somy new Ideas from his<br>
+whose<br>
+asterularly frind<br>
+wife; – the<br>
+barl<br>
+silfh<br>
+manner in whas<br>
+with her, made Anne beleive<br>
+— the gratifyeng Be:<br>
+pleast thate see<br>
+perscousion<br>
+:lir of her sheavly approving.<br>
+what she saw a conpectured.<br>
+It had ben such a day to<br>
+Anne! — the houses which had<br>
+paſsed since her leaving Camding<br>
+Place, had done so much.<br>
+She was almost beweldered, al<br>
+:most too happy in refliating<br>
+bat<br>
+It was neceſsary to set us<br>
+looking<br>
+:night & lie awake the<br>
+half the<br>
+renguibe<br>
+relt to comprehend with compo:<br>
+:sure her present state, & pay<br>
+for the overplies of Bliſs, by<br>
+Madake & Tatigue.</p>`,
+                ai2: `<p>upon recollection, if they had<br>
+[del: been to many at all, it was]<br>
+[del: why should they have been — [del: to be read.]]<br>
+When the door [del: was] closed [del: upon]<br>
+it is probable that the Adml<br>
+received some new Ideas from his<br>
+wife; — [del: that] ^the^ ^whole^ [del: particularly kind]<br>
+manner in [del: which she] ^she^ ^had^ ^parted^ [del: treated]<br>
+with her, [del: gave] made Anne [del: feel]<br>
+at least [del: that] the gratifying [del: be-]<br>
+[del: lief, of her being] approving.<br>
+[del: what she saw & conjectured].<br>
+It had been such a day to<br>
+Anne! the hours which had<br>
+passed since her leaving Camden<br>
+Place, had done so much! —<br>
+She was almost bewildered, al-<br>
+most too happy in [del: reflecting]<br>
+^looking back^. It was necessary to sit up<br>
+half the night & lie awake the<br>
+[del: rest to] ^remainder^ ^to^ comprehend with compo-<br>
+sure her present state, & pay<br>
+for the surplus of Bliss, by<br>
+Headake & Fatigue. —</p>`
             },
             {
                 img: "img/eval/p.3.png",
-                ai1: "<p>Lyme Regis provided a much-needed change of scene. The sea air is bracing, and the company of the Harvilles is a true relief...</p>",
-                ai2: "<p>Lyme Regis provided a much-neded change of sene. The sea air is bracing, and the company of the Harvilles is a true relief...</p>"
+                ai1: `<p>I am not going to dance with Master Blape Tin<br>
+a little<br>
+The Gentleman guite disconcerted, could only<br>
+hope he might be more fortunate another<br>
+time — & seeming unwilling to leave her, tho<br>
+his freind Ld . Osborne was waiting in the Door —<br>
+way for the result, as Emma sa with some<br>
+makelivily<br>
+perclived<br>
+amusement — he soon soin began to exquisies<br>
+after her family. —"How comes it, that we have<br>
+not the pleasure of seeing your Sisters here thes<br>
+evening. — Our Aſsemblies have been used to be<br>
+so will treated by them, that we do not know<br>
+this neglect.<br>
+how to take ther abence. — "My eldest Sister<br>
+is the only one at home — & she could not leave<br>
+"Miſs Watson the only<br>
+my Father — said Emma with noil one at<br>
+home. – You astonish me. — It seems but<br>
+the day before yesterday that I saw them<br>
+all three in this Town. But I am afraid I<br>
+have been a very sad neighbour of late. I<br>
+hear dreadful complaints of my negligence.<br>
+& I confeſsi<br>
+whenever I go. — It is a shameful length.<br>
+of time since I was at stanton. — But<br>
+now indeavour to<br>
+I feel that I shall soome make myself<br>
+amings for the past. – Emma's calm cust:<br>
+les ase<br>
+follantoy must hade<br>
+ie o tel to tatan tee mus</p>`,
+                ai2: `<p>“I am not going to dance with Master Blake Sir.”<br>
+The Gentleman [del: quite] ^a little^ disconcerted, could only<br>
+hope he might be more fortunate another<br>
+time. — Seeming unwilling to leave her, tho’<br>
+his friend Ld. Osborne was waiting in the Door-<br>
+=way for the result as Emma [del: saw] ^perceived^ with some<br>
+amusement — he [del: however] ^makeshift^ began to enquire<br>
+after her family. — “How comes it, that we have<br>
+not the pleasure of seeing your Sisters here this<br>
+evening? — Our Assemblies have been used to be<br>
+so well treated by them, that we do not know<br>
+how to take [del: their absence] ^this neglect^.” — “My eldest Sister<br>
+is the only one at home — & she could not leave<br>
+my Father. — said [del: Emma with a smile] ^“Miss Watson the only one at^<br>
+home.” — “You astonish me!” — It seems but<br>
+the day before yesterday that I saw them<br>
+all three in this Town. But I am afraid I<br>
+have been a very bad neighbour of late. I<br>
+hear dreadful complaints of my negligence<br>
+wherever I go.” — “^& I confess^ It is a shameful length<br>
+of time since I was at Stanton. — But<br>
+[del: I feel that] ^now endeavour to^ I shall [del: soon] make myself<br>
+amends for the past.” — “Emma’s calm Curt-<br>
+sy in reply to [del: all this gallantry] must have</p>`
             },
             {
                 img: "img/eval/p.4.jpg",
-                ai1: "<p>Bath is as crowded and superficial as ever. I find myself longing for the simple pleasures of Uppercross, despite the frequent complaints...</p>",
-                ai2: "<p>Bath is as crowded and superficial as ever. I find myself longing for the simple pleasures of Uppercros, despite the frequent complaints...</p>"
+                ai1: `<p>stuck him as very unlike the gratituleng here<br>
+Sisters encouraging warmth he had beed tired to<br>
+receive from her Sisters, & gave him probably the<br>
+novel semration of doubting his own influence, &<br>
+beslowed.<br>
+wishing for more attention than she god<br>
+&ben<br>
+The dancing now recommenced; Miſs Carr was<br>
+impatient to Call, every bady was required to<br>
+stand up — & Tom Musgrave’s curiosity was ap:<br>
+ne forwald & elair<br>
+ahed<br>
+on seeing in<br>
+:peases, be seeng Howard came to elo<br>
+Emma’'s han<br>
+prartner. — "That will do as well for me — was<br>
+when his friend carried<br>
+heaving her ſing<br>
+Ld . Osbornes remark, when<br>
+him the ews —–<br>
+– — & he was continually at tho<br>
+two<br>
+:wards Elbow dusing the dances. —The frequint<br>
+of his apparance there, was the only unpleasont<br>
+part of her engagement, to dmay the only ob:<br>
+:fection she could make to Mr . Howard. — Ior<br>
+himself she thought him as agreable as he<br>
+topies<br>
+looked; tho chatting on the commonest mall<br>
+sensible<br>
+he had an easy, unaffected, Hurnpretending man:<br>
+:nere which of expreſsing himself, which made<br>
+them all worth hearing, & she only reqritted<br>
+that he had not been able to make his<br>
+hupils Manners as unexceptionable as his<br>
+own. — "he two dances seemed very short,<br>
+& she had her pastnes’s authority for emordired</p>`,
+                ai2: `<p>struck him as very unlike the [del: gratitude of her]<br>
+[del: Sisters] encouraging warmth he had been used to<br>
+receive from her sisters, & gave him probably the<br>
+novel sensation of doubting his own influence, &<br>
+wishing for more attention than she [del: gave] ^bestowed^.<br>
+The dancing now recommenced; Miss Carr [del: was] ^being^<br>
+impatient to call, everybody was required to<br>
+stand up. — & Tom Musgrave’s curiosity was ap:<br>
+:peased [del: on seeing Mr] ^on seeing Mr^ Howard [del: come to claim] ^come forward & claim^<br>
+[del: Emma’s] hand; “That will do as well for me” — was<br>
+Ld Osborne’s remark, [del: when his friend carried] ^when his friend carried^<br>
+[del: him the news —] & he was continually at Ho:<br>
+:ward’s elbow during the [del: two] ^two^ dances. — The frequency<br>
+of his appearance there, was the only unpleasant<br>
+part of her engagement [del: to Emma], the only ob:<br>
+:jection she could make to Mr Howard. — In<br>
+himself, she thought him as agreeable as he<br>
+looked; tho’ chatting on the commonest ^topics^<br>
+he had a [del: way] ^sensible^, unaffected, ^way^<br>
+[del: of expressing himself] of expressing himself, which made<br>
+them all worth hearing; & she only regretted<br>
+that he had not been able to make his<br>
+pupils’ manners as unexceptionable as his<br>
+own. —— The two dances seemed very short<br>
+& she had her partner’s authority for considering</p>`
             },
             {
                 img: "img/eval/p.5.png",
-                ai1: "<p>I saw Mr. Elliot in the Pump Room today. He is a man of undeniable charm and elegance, yet there is something about his character...</p>",
-                ai2: "<p>I saw Mr. Elliot in the Pump Room today. He is a man of undeniable charm and elegance, yet there is something about his charcter...</p>"
+                ai1: `<p>P 29 <br>
+<br>
+20<br>
+Chapter the second<br>
+For thre months did the Masgues<br>
+:rade afford ample subject for conversation<br>
+to their inhabitants of Pammydiddle; but not<br>
+character at it was so fully expatialed<br>
+on as Charles Adams. The singularity of her<br>
+appearance, the beams which darled from<br>
+his eyes, the brightneſs of his Wit, & the<br>
+whole bout ensemble of his person had sub:<br>
+:dued the hearts of so many of the young<br>
+Ladies, that of the six present at the<br>
+Masquerade but five had returned uncap:<br>
+tivated. Alice Johnson was the unhappy<br>
+sixth whose heart had aot been able to<br>
+withstand the power of his Charms. But as<br>
+may<br>
+appear strange to my Reades,</p>`,
+                ai2: `<p>( 29<br>
+<br>
+              Chapter the Second<br>
+<br>
+            For three months did the Masque:<br>
+-rade afford ample subject for conversation<br>
+to the inhabitants of Pammydiddle; but no<br>
+character at it was so fully expatiated<br>
+on as Charles Adams. The singularity of his<br>
+appearance, the beams which darted from<br>
+his eyes, the brightness of his Wit, & the<br>
+whole tout ensemble of his person had sub:<br>
+:dued the hearts of so many of the young<br>
+Ladies, that of the six present at the<br>
+Masquerade but five had returned uncap:<br>
+:tivated. Alice Johnson was the unhappy<br>
+sixth whose heart had not been able to<br>
+withstand the power of his Charms. But as<br>
+it may appear strange to my Readers,</p>`
             },
             {
                 img: "img/eval/p.6.png",
-                ai1: "<p>I can no longer listen in silence. I must speak to you by such means as are within my reach. You pierce my soul. I am half agony, half hope...</p>",
-                ai2: "<p>I cen no longer listen in silence. I must speak to you by such mens as are within my reach. You pierce my soul. I am half agony, half hop...</p>"
+                ai1: `<p>so much worth and Excellence as he<br>
+ed should have conquired only Lers<br>
+& be neceſsary to inform thim that<br>
+f Limpsons were defended foom his<br>
+by Ambition, Envy, & Selfadmiratinn<br>
+iry wish of Caroline was undered<br>
+Hled Shsband, whilst in Sukey such<br>
+& excellence whld only raise he<br>
+&Enoy<br>
+Sove, & Cevilia was too tenderly it.<br>
+to herself to be pleased with any<br>
+hs<br>
+rides. As for Lady Willia<br>
+es of the<br>
+m was too<br>
+s the form<br>
+"A, to fall. in love with one so<br>
+Iunior<br>
+her enprise & the latter, tho very<br>
+& very paſsionate was too fond of<br>
+Susband to think of such a thing</p>`,
+                ai2: `<p>30 /<br>
+<br>
+that so much worth and Excellence as he<br>
+possessed should have conquered only hers,<br>
+it will be necessary to inform them that<br>
+the Miss Simpsons were defended from his<br>
+Power by Ambition, Envy, & Selfadmiration.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Every wish of Caroline was centered<br>
+in a titled Husband; whilst in Sukey such<br>
+superior excellence could only raise her Envy,<br>
+not her Love, & Cecilia was too tenderly at:<br>
+:tached to herself to be pleased with any<br>
+one besides. As for Lady Williams and<br>
+Mrs Jones, the former of them was too<br>
+sensible, to fall in love with one so<br>
+^Junior^<br>
+much her [del: inferior] & the latter; tho' very<br>
+tall & very passionate was too fond of<br>
+her Husband to think of such a thing.</p>`
             }
         ];
 
