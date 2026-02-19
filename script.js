@@ -606,7 +606,7 @@ class GuideManager {
                 id: 'step1',
                 page: 'index.html',
                 target: '.logo-container img',
-                text: 'For a better experience let us guide you through the Semantic Austen Digital Library.',
+                text: 'For a better experience, let us guide you through the Semantic Austen Digital Library.',
                 point: 'point-top-left',
                 button: 'Continue',
                 position: (rect) => ({
