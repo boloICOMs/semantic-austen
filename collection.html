@@ -38,7 +38,52 @@
         </section>
 
         <section class="search-section">
-            <input type="text" class="search-bar" placeholder="Search the collection...">
+            <input type="text" class="search-bar" placeholder="Search for a word...">
+
+            <div class="faceted-research-container">
+                <button id="faceted-toggle" class="faceted-toggle">
+                    Faceted Research <span class="toggle-icon">▶</span>
+                </button>
+
+                <div id="faceted-dropdown" class="faceted-dropdown">
+                    <div class="filter-categories">
+                        <!-- Sex Category -->
+                        <div class="filter-group">
+                            <button class="category-toggle">Sex</button>
+                            <div class="category-options">
+                                <label><input type="checkbox" name="sex" value="female"> Female</label>
+                                <label><input type="checkbox" name="sex" value="male"> Male</label>
+                            </div>
+                        </div>
+
+                        <!-- Place Category -->
+                        <div class="filter-group">
+                            <button class="category-toggle">Place</button>
+                            <div class="category-options">
+                                <label><input type="checkbox" name="place" value="real"> Real places</label>
+                                <label><input type="checkbox" name="place" value="fake"> Fake Places</label>
+                            </div>
+                        </div>
+
+                        <!-- Themes Category -->
+                        <div class="filter-group">
+                            <button class="category-toggle">Themes</button>
+                            <div class="category-options">
+                                <label><input type="checkbox" name="themes" value="economics"> Economics &
+                                    Property</label>
+                                <label><input type="checkbox" name="themes" value="ethics"> Ethics & Sentiments</label>
+                                <label><input type="checkbox" name="themes" value="social"> Social Dynamics &
+                                    Reputation</label>
+                                <label><input type="checkbox" name="themes" value="space"> Space & Communication</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button id="clear-filters" class="btn-clear">Clear filters</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="collection-grid">

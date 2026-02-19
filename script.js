@@ -567,6 +567,35 @@ her Husband to think of such a thing.</p>`
 
         updateEvalPage();
     }
+
+    /* --- Faceted Research Logic --- */
+    const facetedToggle = document.getElementById('faceted-toggle');
+    const facetedDropdown = document.getElementById('faceted-dropdown');
+    const categoryToggles = document.querySelectorAll('.category-toggle');
+    const clearFiltersBtn = document.getElementById('clear-filters');
+
+    if (facetedToggle && facetedDropdown) {
+        facetedToggle.addEventListener('click', () => {
+            facetedDropdown.classList.toggle('active');
+            facetedToggle.classList.toggle('faceted-toggle-active');
+        });
+
+        // Toggle sub-categories
+        categoryToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const group = toggle.parentElement;
+                group.classList.toggle('active');
+            });
+        });
+
+        // Clear filters
+        if (clearFiltersBtn) {
+            clearFiltersBtn.addEventListener('click', () => {
+                const checkboxes = facetedDropdown.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(cb => cb.checked = false);
+            });
+        }
+    }
 });
 
 /* --- Guided Tour Manager --- */
