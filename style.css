@@ -1518,3 +1518,132 @@ footer {
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Guided Tour Styles */
+.guide-popup {
+    position: absolute;
+    background-color: var(--accent-slate);
+    color: var(--action-red);
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10001;
+    max-width: 280px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.4;
+    font-size: 1.1rem;
+    pointer-events: auto;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+.guide-popup::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Position tail based on alignment */
+.guide-popup.point-left::after {
+    border-width: 15px 20px 15px 0;
+    border-color: transparent var(--accent-slate) transparent transparent;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.guide-popup.point-top::after {
+    border-width: 0 15px 20px 15px;
+    border-color: transparent transparent var(--accent-slate) transparent;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.guide-popup.point-bottom::after {
+    border-width: 20px 15px 0 15px;
+    border-color: var(--accent-slate) transparent transparent transparent;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.guide-popup.point-top-left::after {
+    border-width: 0 15px 20px 15px;
+    border-color: transparent transparent var(--accent-slate) transparent;
+    top: -18px;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+.guide-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.guide-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--action-red);
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.guide-close:hover {
+    opacity: 1;
+}
+
+.guide-btn {
+    align-self: flex-end;
+    background-color: var(--action-red);
+    color: var(--accent-slate);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.guide-btn:hover {
+    transform: scale(1.05);
+    background-color: #3a0808;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.guide-popup-active {
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.guide-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    backdrop-filter: blur(2px);
+    pointer-events: none;
+}
