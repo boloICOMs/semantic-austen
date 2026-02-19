@@ -38,15 +38,59 @@
         </section>
 
         <section class="search-section">
-            <input type="text" class="search-bar" placeholder="Search the collection...">
+            <input type="text" class="search-bar" placeholder="Search for a word...">
+
+            <div class="faceted-research-container">
+                <button id="faceted-toggle" class="faceted-toggle">
+                    Faceted Research <span class="toggle-icon">▶</span>
+                </button>
+
+                <div id="faceted-dropdown" class="faceted-dropdown">
+                    <div class="filter-categories">
+                        <!-- Sex Category -->
+                        <div class="filter-group">
+                            <button class="category-toggle">Sex</button>
+                            <div class="category-options">
+                                <label><input type="checkbox" name="sex" value="female"> Female</label>
+                                <label><input type="checkbox" name="sex" value="male"> Male</label>
+                            </div>
+                        </div>
+
+                        <!-- Place Category -->
+                        <div class="filter-group">
+                            <button class="category-toggle">Place</button>
+                            <div class="category-options">
+                                <label><input type="checkbox" name="place" value="real"> Real places</label>
+                                <label><input type="checkbox" name="place" value="fake"> Fake Places</label>
+                            </div>
+                        </div>
+
+                        <!-- Themes Category -->
+                        <div class="filter-group">
+                            <button class="category-toggle">Themes</button>
+                            <div class="category-options">
+                                <label><input type="checkbox" name="themes" value="economics"> Economics &
+                                    Property</label>
+                                <label><input type="checkbox" name="themes" value="ethics"> Ethics & Sentiments</label>
+                                <label><input type="checkbox" name="themes" value="social"> Social Dynamics &
+                                    Reputation</label>
+                                <label><input type="checkbox" name="themes" value="space"> Space & Communication</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button id="clear-filters" class="btn-clear">Clear filters</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="collection-grid">
             <!-- Card 1: Persuasion -->
             <a href="persuasion.html" class="collection-card">
                 <div class="card-image-wrapper">
-                    <img src="img/collection/persuasion.jpg"
-                        alt="Persuasion">
+                    <img src="img/collection/persuasion.jpg" alt="Persuasion">
                 </div>
                 <div class="card-caption">
                     <h4>Persuasion</h4>
@@ -56,8 +100,7 @@
             <!-- Card 2: Pride and Prejudice -->
             <a href="#" class="collection-card">
                 <div class="card-image-wrapper">
-                    <img src="img/collection/juvenilia.jpg"
-                        alt="Juvenilia">
+                    <img src="img/collection/juvenilia.jpg" alt="Juvenilia">
                 </div>
                 <div class="card-caption">
                     <h4>Juvenilia</h4>
@@ -67,19 +110,17 @@
             <!-- Card 4: Emma -->
             <a href="#" class="collection-card">
                 <div class="card-image-wrapper">
-                    <img src="img/collection/thewatsons.jpg"
-                        alt="The Watsons">
+                    <img src="img/collection/thewatsons.jpg" alt="The Watsons">
                 </div>
                 <div class="card-caption">
                     <h4>The Watsons</h4>
                 </div>
             </a>
-            
+
             <!-- Card 3: Sense and Sensibility -->
             <a href="#" class="collection-card">
                 <div class="card-image-wrapper">
-                    <img src="img/collection/ladysusan.jpg"
-                        alt="Lady Susan">
+                    <img src="img/collection/ladysusan.jpg" alt="Lady Susan">
                 </div>
                 <div class="card-caption">
                     <h4>Lady Susan</h4>
@@ -89,8 +130,7 @@
             <!-- Card 5: Mansfield Park -->
             <a href="#" class="collection-card">
                 <div class="card-image-wrapper">
-                    <img src="img/collection/susan.jpg"
-                        alt="Susan">
+                    <img src="img/collection/susan.jpg" alt="Susan">
                 </div>
                 <div class="card-caption">
                     <h4>Susan</h4>
@@ -100,8 +140,7 @@
             <!-- Card 6: Sanditon -->
             <a href="#" class="collection-card">
                 <div class="card-image-wrapper">
-                    <img src="img/collection/sanditon.jpg"
-                        alt="Sanditon">
+                    <img src="img/collection/sanditon.jpg" alt="Sanditon">
                 </div>
                 <div class="card-caption">
                     <h4>Sanditon</h4>
@@ -111,8 +150,7 @@
             <!-- Card 7: The Juvenilia -->
             <a href="#" class="collection-card">
                 <div class="card-image-wrapper">
-                    <img src="img/collection/opinions.jpg"
-                        alt="Opinions">
+                    <img src="img/collection/opinions.jpg" alt="Opinions">
                 </div>
                 <div class="card-caption">
                     <h4>Opinions of Mansfield Park, Opinions of Emma</h4>
@@ -122,8 +160,7 @@
             <!-- Card 8: Northanger Abbey -->
             <a href="#" class="collection-card">
                 <div class="card-image-wrapper">
-                    <img src="img/collection/profits.jpg"
-                        alt="Profits">
+                    <img src="img/collection/profits.jpg" alt="Profits">
                 </div>
                 <div class="card-caption">
                     <h4>Profits of my Novels</h4>
@@ -133,8 +170,7 @@
             <!-- Card 9: Lady Susan -->
             <a href="#" class="collection-card">
                 <div class="card-image-wrapper">
-                    <img src="img/collection/plan.jpg"
-                        alt="Plan">
+                    <img src="img/collection/plan.jpg" alt="Plan">
                 </div>
                 <div class="card-caption">
                     <h4>Plan of a Novel</h4>

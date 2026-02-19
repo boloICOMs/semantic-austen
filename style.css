@@ -1621,3 +1621,316 @@ footer {
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Guided Tour Styles */
+.guide-popup {
+    position: absolute;
+    background-color: var(--accent-slate);
+    color: var(--action-red);
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10001;
+    max-width: 280px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.4;
+    font-size: 1.1rem;
+    pointer-events: auto;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+.guide-popup::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Position tail based on alignment */
+.guide-popup.point-left::after {
+    border-width: 15px 20px 15px 0;
+    border-color: transparent var(--accent-slate) transparent transparent;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.guide-popup.point-top::after {
+    border-width: 0 15px 20px 15px;
+    border-color: transparent transparent var(--accent-slate) transparent;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.guide-popup.point-bottom::after {
+    border-width: 20px 15px 0 15px;
+    border-color: var(--accent-slate) transparent transparent transparent;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.guide-popup.point-top-left::after {
+    border-width: 0 15px 20px 15px;
+    border-color: transparent transparent var(--accent-slate) transparent;
+    top: -18px;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+.guide-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.guide-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--action-red);
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.guide-close:hover {
+    opacity: 1;
+}
+
+.guide-btn {
+    align-self: flex-end;
+    background-color: var(--action-red);
+    color: var(--accent-slate);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.guide-btn:hover {
+    transform: scale(1.05);
+    background-color: #3a0808;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.guide-popup-active {
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.guide-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    backdrop-filter: blur(2px);
+    pointer-events: none;
+}
+
+/* Faceted Research Styles */
+.faceted-research-container {
+    margin-top: 5px;
+    text-align: right;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.faceted-toggle {
+    background: none;
+    border: none;
+    color: var(--brand-navy);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    /* Bigger */
+    font-weight: 700;
+    /* Bolder */
+    cursor: pointer;
+    padding: 5px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+    position: relative;
+    /* For the underline */
+}
+
+.faceted-toggle::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--action-red);
+    transition: width 0.3s ease;
+}
+
+.faceted-toggle:hover::after,
+.faceted-toggle-active::after {
+    width: 100%;
+}
+
+.faceted-toggle:hover {
+    color: var(--action-red);
+}
+
+.toggle-icon {
+    font-size: 0.8rem;
+    /* Match sub-category icon size */
+    line-height: 1;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.faceted-dropdown.active~.faceted-toggle .toggle-icon,
+/* This selector depends on HTML order, let's use a simpler one with JS toggle if needed */
+.faceted-toggle-active .toggle-icon {
+    transform: rotate(90deg);
+}
+
+.faceted-dropdown {
+    display: none;
+    background-color: var(--brand-navy);
+    color: var(--bg-pearl);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 0.3s ease forwards;
+    text-align: left;
+    /* Keep content left aligned */
+}
+
+.faceted-dropdown.active {
+    display: block;
+}
+
+.filter-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filter-group {
+    border-bottom: 1px solid rgba(233, 225, 211, 0.1);
+    padding-bottom: 10px;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.category-toggle {
+    background: none;
+    border: none;
+    color: var(--bg-pearl);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-toggle::after {
+    content: '▶';
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.filter-group.active .category-toggle::after {
+    transform: rotate(90deg);
+}
+
+.category-options {
+    display: none;
+    padding: 10px 0 5px 15px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-group.active .category-options {
+    display: flex;
+}
+
+.category-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
+.category-options input[type="checkbox"] {
+    accent-color: var(--action-red);
+    width: 16px;
+    height: 16px;
+}
+
+.filter-actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(233, 225, 211, 0.2);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-clear {
+    background-color: transparent;
+    border: 1px solid var(--bg-pearl);
+    color: var(--bg-pearl);
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-clear:hover {
+    background-color: var(--bg-pearl);
+    color: var(--brand-navy);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

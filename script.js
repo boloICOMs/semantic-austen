@@ -690,4 +690,211 @@ her Husband to think of such a thing.</p>`
 
         updateEvalPage();
     }
+
+    /* --- Faceted Research Logic --- */
+    const facetedToggle = document.getElementById('faceted-toggle');
+    const facetedDropdown = document.getElementById('faceted-dropdown');
+    const categoryToggles = document.querySelectorAll('.category-toggle');
+    const clearFiltersBtn = document.getElementById('clear-filters');
+
+    if (facetedToggle && facetedDropdown) {
+        facetedToggle.addEventListener('click', () => {
+            facetedDropdown.classList.toggle('active');
+            facetedToggle.classList.toggle('faceted-toggle-active');
+        });
+
+        // Toggle sub-categories
+        categoryToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const group = toggle.parentElement;
+                group.classList.toggle('active');
+            });
+        });
+
+        // Clear filters
+        if (clearFiltersBtn) {
+            clearFiltersBtn.addEventListener('click', () => {
+                const checkboxes = facetedDropdown.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(cb => cb.checked = false);
+            });
+        }
+    }
+});
+
+/* --- Guided Tour Manager --- */
+class GuideManager {
+    constructor() {
+        this.steps = [
+            {
+                id: 'step1',
+                page: 'index.html',
+                target: '.logo-container img',
+                text: 'For a better experience, let us guide you through the Semantic Austen Digital Library.',
+                point: 'point-top-left',
+                button: 'Continue',
+                position: (rect) => ({
+                    top: rect.bottom + 15,
+                    left: rect.left + rect.width / 4
+                })
+            },
+            {
+                id: 'step2',
+                page: 'index.html',
+                target: '.collection-link',
+                text: 'click here.',
+                point: 'point-top',
+                button: null,
+                position: (rect) => ({
+                    top: rect.bottom + 20,
+                    left: rect.left + rect.width / 2 - 140
+                })
+            },
+            {
+                id: 'step3',
+                page: 'collection.html',
+                target: '.collection-card[href="persuasion.html"] .card-caption h4',
+                text: 'click here.',
+                point: 'point-top',
+                button: null,
+                position: (rect) => ({
+                    top: rect.bottom + 10,
+                    left: rect.left + rect.width / 2 - 140
+                })
+            }
+        ];
+
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+        if (currentPage === 'index.html') {
+            localStorage.removeItem('guideStep');
+            localStorage.removeItem('guideClosed');
+        }
+
+        this.currentStepIndex = parseInt(localStorage.getItem('guideStep')) || 0;
+        this.isClosed = localStorage.getItem('guideClosed') === 'true';
+
+        if (!this.isClosed) {
+            this.init();
+        }
+    }
+
+    init() {
+        window.addEventListener('load', () => {
+            setTimeout(() => this.showStep(), 300);
+        });
+        window.addEventListener('resize', () => this.updatePosition());
+    }
+
+    async showStep() {
+        const step = this.steps[this.currentStepIndex];
+        if (!step) return;
+
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        if (step.page !== currentPage) return;
+
+        const targetEl = document.querySelector(step.target);
+        if (!targetEl) return;
+
+        if (step.id === 'step3') {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            await new Promise(resolve => setTimeout(resolve, 400));
+        }
+
+        this.createPopup(step, targetEl);
+    }
+
+    createPopup(step, targetEl) {
+        this.removePopup();
+
+        const popup = document.createElement('div');
+        popup.className = `guide-popup ${step.point} guide-popup-active`;
+        popup.id = 'guide-popup';
+
+        const rect = targetEl.getBoundingClientRect();
+        const pos = step.position(rect);
+
+        popup.style.top = `${pos.top + window.scrollY}px`;
+        popup.style.left = `${pos.left + window.scrollX}px`;
+
+        let contentHtml = `
+            <button class="guide-close" id="guide-close-btn" aria-label="Close guide">×</button>
+            <div class="guide-content">
+                <p>${step.text}</p>
+        `;
+
+        if (step.button) {
+            contentHtml += `<button class="guide-btn" id="guide-continue-btn">${step.button}</button>`;
+        }
+
+        contentHtml += `</div>`;
+        popup.innerHTML = contentHtml;
+
+        document.body.appendChild(popup);
+
+        document.getElementById('guide-close-btn').onclick = (e) => {
+            e.stopPropagation();
+            this.closeGuide();
+        };
+
+        if (step.button) {
+            document.getElementById('guide-continue-btn').onclick = (e) => {
+                e.stopPropagation();
+                this.nextStep();
+            };
+        }
+
+        if (!step.button) {
+            const handleTargetClick = () => {
+                this.nextStep();
+            };
+            targetEl.addEventListener('click', handleTargetClick, { once: true });
+        }
+    }
+
+    nextStep() {
+        this.currentStepIndex++;
+        if (this.currentStepIndex < this.steps.length) {
+            localStorage.setItem('guideStep', this.currentStepIndex);
+            this.showStep();
+        } else {
+            this.completeGuide();
+        }
+    }
+
+    updatePosition() {
+        const popup = document.getElementById('guide-popup');
+        if (!popup) return;
+
+        const step = this.steps[this.currentStepIndex];
+        const targetEl = document.querySelector(step.target);
+        if (!targetEl) return;
+
+        const rect = targetEl.getBoundingClientRect();
+        const pos = step.position(rect);
+
+        popup.style.top = `${pos.top + window.scrollY}px`;
+        popup.style.left = `${pos.left + window.scrollX}px`;
+    }
+
+    removePopup() {
+        const popup = document.getElementById('guide-popup');
+        if (popup) popup.remove();
+    }
+
+    closeGuide() {
+        this.removePopup();
+        localStorage.setItem('guideClosed', 'true');
+        this.isClosed = true;
+    }
+
+    completeGuide() {
+        this.removePopup();
+        localStorage.setItem('guideClosed', 'true');
+        localStorage.removeItem('guideStep');
+        this.isClosed = true;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.guideManager = new GuideManager();
 });
