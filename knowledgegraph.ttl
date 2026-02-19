@@ -1,0 +1,61 @@
+@base <https://boloicoms.github.io/semantic-austen/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+
+<JA> a schema:Person ;
+    owl:sameAs <http://viaf.org/viaf/102333412> , <https://www.wikidata.org/entity/Q36322> ;
+    schema:name "Jane Austen"@en ;
+    schema:hasOccupation <https://www.wikidata.org/entity/Q36180> .
+
+<persuasion#work> a  schema:CreativeWork ;
+    dcterms:creator <JA> ;
+    dcterms:title "Persuasion"@en ;
+    dcterms:issued "1817"^^xsd:gYear ;
+    dcterms:type <https://www.wikidata.org/entity/Q738473> ;
+    dcterms:language <https://www.wikidata.org/entity/Q1860> ;
+    schema:locationCreated <https://sws.geonames.org/2635167> ;
+    owl:sameAs <https://viaf.org/viaf/174359768> , <https://www.wikidata.org/entity/Q333179> ;
+    schema:workExample <persuasion> , <persuasion#manuscript> ;
+    schema:character <AN> ;
+    schema:contentLocation <WB> , <GS> , <BATH> , <LYME> , <SS> . 
+
+<persuasion> a schema:DigitalDocument ;
+    dcterms:title "Semantic Austen: Digital Edition of Persuasion by Jane Austen"@en ;
+    schema:publisher <https://boloicoms.github.io/semantic-austen/> ;
+    schema:mainEntity <persuasion#manuscript> ;
+    schema:exampleOfWork <persuasion#work> ;
+    dcterms:format "application/xml+tei" . 
+
+<persuasion#manuscript> a schema:Manuscript ;
+    dcterms:identifier "MS. Egerton 3038"@en ;
+    dcterms:source <https://www.wikidata.org/entity/Q23308> ;
+    schema:exampleOfWork <persuasion#work> .
+
+<AN> a schema:Person ;
+    schema:name "Anne Elliot"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2851075> ;
+    schema:gender "Female" .
+
+<WB> a schema:Place ;
+    owl:sameAs <https://www.wikidata.org/entity/Q26688921> ;
+    schema:name "Westgate Buildings"@en .
+
+<GS> a schema:Place ;
+    owl:sameAs <https://www.wikidata.org/entity/Q5528646> ;
+    schema:name "Gay Street"@en .
+
+<BATH> a schema:Place ;
+    owl:sameAs <https://sws.geonames.org/2656173> ;
+    schema:name "Bath"@en .
+
+<LYME> a schema:Place ;
+    owl:sameAs <https://sws.geonames.org/2643314> ;
+    schema:name "Lyme Regis"@en .
+
+<SS> a schema:Place ;
+    owl:sameAs <https://sws.geonames.org/2638655> ;
+    schema:name "Shropshire"@en .
+    
+    

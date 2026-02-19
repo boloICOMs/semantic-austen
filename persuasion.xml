@@ -104,8 +104,8 @@
             </classDecl>
             <particDesc>
                 <listPerson>
-                    <person xml:id="JA" type="real" sameAs="http://viaf.org/viaf/102333412"><persName>Jane Austen</persName></person>
-                    <person xml:id="AN" type="fictional" sameAs="https://www.wikidata.org/entity/Q2851075"><persName>Anne Elliot</persName><sex value="1">female</sex></person>
+                    <person xml:id="JA" type="real" sameAs="https://boloicoms.github.io/semantic-austen/JA"><persName>Jane Austen</persName></person>
+                    <person xml:id="AN" type="fictional" sameAs="https://boloicoms.github.io/semantic-austen/AN"><persName>Anne Elliot</persName><sex value="1">female</sex></person>
                     <person xml:id="ME" type="fictional"><persName>Mr. Elliot</persName><sex value="2">male</sex></person>
                     <person xml:id="LR" type="fictional"><persName>Lady Russell</persName><sex value="1">female</sex></person>
                     <person xml:id="AC" type="fictional"><persName>Admiral Croft</persName><sex value="2">male</sex></person>
@@ -119,13 +119,13 @@
 
             <settingDesc>
                 <listPlace>
-                    <place xml:id="WB" type="real" sameAs="https://www.wikidata.org/entity/Q26688921"><placeName>Westgate Buildings</placeName></place>
+                    <place xml:id="WB" type="real" sameAs="https://boloicoms.github.io/semantic-austen/WB"><placeName>Westgate Buildings</placeName></place>
                     <place xml:id="KH" type="fictional"><placeName>Kellynch Hall</placeName></place>
-                    <place xml:id="GS" type="real" sameAs="https://www.wikidata.org/entity/Q5528646"><placeName>Gay Street</placeName></place>
-                    <place xml:id="BATH" type="real" sameAs="https://sws.geonames.org/2656173"><placeName>Bath</placeName></place>
-                    <place xml:id="LYME" type="real" sameAs="https://sws.geonames.org/2643314"><placeName>Lyme Regis</placeName></place>
+                    <place xml:id="GS" type="real" sameAs="https://boloicoms.github.io/semantic-austen/GS"><placeName>Gay Street</placeName></place>
+                    <place xml:id="BATH" type="real" sameAs="https://boloicoms.github.io/semantic-austen/BATH"><placeName>Bath</placeName></place>
+                    <place xml:id="LYME" type="real" sameAs="https://boloicoms.github.io/semantic-austen/LYME"><placeName>Lyme Regis</placeName></place>
                     <place xml:id="UC" type="fictional"><placeName>Uppercross</placeName></place>
-                    <place xml:id="SS" type="real" sameAs="https://sws.geonames.org/2638655"><placeName>Shropshire</placeName></place>
+                    <place xml:id="SS" type="real" sameAs="https://boloicoms.github.io/semantic-austen/SS"><placeName>Shropshire</placeName></place>
                 </listPlace>
             </settingDesc>
         </profileDesc>
