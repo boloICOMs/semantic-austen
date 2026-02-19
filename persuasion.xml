@@ -1,0 +1,513 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns='http://www.tei-c.org/ns/1.0'>
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type='work' ref='https://www.wikidata.org/entity/Q333179'>Persuasion</title>
+                <title type='expression'>Digital Diplomatic Edition of Jane Austen's draft manuscripts</title>
+                <author ref='#JA'>Jane Austen</author>
+                <respStmt>
+                    <resp>compiled by</resp>
+                    <persName><forename>Nicol</forename> <surname>D'amelio</surname></persName>
+                </respStmt>
+			</titleStmt>
+            <editionStmt>
+                <edition>Semantic Austen project's edition, <date when="2026-02">February 2026</date></edition>
+                <respStmt>
+                    <resp>Annotations by</resp>
+                    <persName><forename>Nicol</forename> <surname>D'amelio</surname></persName>
+                </respStmt>
+            </editionStmt>
+            <extent>
+                <measure unit="pages" quantity="4">4 manuscript pages</measure>
+                <measure unit="format">XML/TEI file</measure>
+            </extent>
+            <publicationStmt>
+                <authority>Semantic Austen</authority>
+                <idno type="URI">https://github.com/boloICOMs/semantic-austen</idno>
+                <date when="2026">2026</date>
+                <availability status="restricted">
+                    <p> The digitised manuscripts are made available by the British Library under a Public Domain license.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc xml:id="Egerton_3038_Item">
+                    <msIdentifier>
+                        <repository>British Library</repository>
+                        <idno>Egerton MS 3038</idno>
+                        <msName>Persuasion (Item)</msName>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem>
+                            <title>Manuscript draft of Chapters 10 and 11</title>
+                            <textLang mainLang="en">19th-century English</textLang>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc form="manuscript">
+                            <supportDesc>
+                                <support>Paper written in iron-gall ink, with authorial corrections and deletions.</support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>Single column with supralinear and marginal additions.</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origDate when="1816">1816</origDate>
+                            <origPlace>Chawton, UK</origPlace>
+                        </origin>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Text encoded for the project "Semantic Austen", developed for the course "Semantic Digital Libraries" of the DHDK master degree at University of Bologna.</p>
+            </projectDesc>
+            <samplingDecl>
+                <p>For the sake of the exam only four pages from Jane Austen's draft manuscript of "Persuasion" were encoded, as a prototype to potentially implement in the Semantic Digital Library. </p>
+            </samplingDecl>
+            <editorialDecl>
+                <correction>
+                    <p>All authorial alterations (deletions and additions) are encoded diplomatically. 
+                   Deletions are marked as &lt;del&gt; and additions as &lt;add&gt;, with their physical rendering and placement (i.e. strikethrough, supralinear).</p>
+                </correction>
+                <normalization>
+                    <p>Original spelling, capitalization, and idiosyncratic punctuation are strictly preserved.</p>
+                </normalization>
+                <hyphenation>
+                    <p>Original line breaks are maintained using the &lt;l&gt; element.</p>
+                </hyphenation>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+            <classDecl>
+                <taxonomy xml:id="austen-themes">
+                    <category xml:id="ECON">
+                        <catDesc>Economics &amp; Property: terms related to inheritance, wealth, and estates.</catDesc>
+                    </category>
+                    <category xml:id="ETHIC">
+                        <catDesc>Ethics &amp; Sentiment: terms related to moral character and internal feelings.</catDesc>
+                    </category>
+                    <category xml:id="SOCIAL">
+                        <catDesc>Social Dynamics &amp; Reputation: terms regarding status, social circles and relations.</catDesc>
+                    </category>
+                    <category xml:id="COMM">
+                        <catDesc>Space &amp; Communication: terms related to travel, movement, and means of communication, such as letters.</catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+            <particDesc>
+                <listPerson>
+                    <person xml:id="JA" type="real" sameAs="http://viaf.org/viaf/102333412"><persName>Jane Austen</persName></person>
+                    <person xml:id="AN" type="fictional" sameAs="https://www.wikidata.org/entity/Q2851075"><persName>Anne Elliot</persName><sex value="1">female</sex></person>
+                    <person xml:id="ME" type="fictional"><persName>Mr. Elliot</persName><sex value="2">male</sex></person>
+                    <person xml:id="LR" type="fictional"><persName>Lady Russell</persName><sex value="1">female</sex></person>
+                    <person xml:id="AC" type="fictional"><persName>Admiral Croft</persName><sex value="2">male</sex></person>
+                    <person xml:id="MC" type="fictional"><persName>Mrs. Clay</persName><sex value="1">female</sex></person>
+                    <person xml:id="EE" type="fictional"><persName>Elisabeth Elliot</persName><sex value="1">female</sex></person>
+                    <person xml:id="LM" type="fictional"><persName>Louisa Musgrove</persName><sex value="1">female</sex></person>
+                    <person xml:id="CH" type="fictional"><persName>Captain Harville</persName><sex value="2">male</sex></person>
+                    <person xml:id="CB" type="fictional"><persName>Captain Benwick</persName><sex value="2">male</sex></person>
+                </listPerson>
+            </particDesc>
+
+            <settingDesc>
+                <listPlace>
+                    <place xml:id="WB" type="real" sameAs="https://www.wikidata.org/entity/Q26688921"><placeName>Westgate Buildings</placeName></place>
+                    <place xml:id="KH" type="fictional"><placeName>Kellynch Hall</placeName></place>
+                    <place xml:id="GS" type="real" sameAs="https://www.wikidata.org/entity/Q5528646"><placeName>Gay Street</placeName></place>
+                    <place xml:id="BATH" type="real" sameAs="https://sws.geonames.org/2656173"><placeName>Bath</placeName></place>
+                    <place xml:id="LYME" type="real" sameAs="https://sws.geonames.org/2643314"><placeName>Lyme Regis</placeName></place>
+                    <place xml:id="UC" type="fictional"><placeName>Uppercross</placeName></place>
+                    <place xml:id="SS" type="real" sameAs="https://sws.geonames.org/2638655"><placeName>Shropshire</placeName></place>
+                </listPlace>
+            </settingDesc>
+        </profileDesc>
+	</teiHeader>
+	<facsimile xml:id='facs_1'>
+		<surface ulx='0' uly='0' lrx='1014' lry='1574'>
+			<graphic url='0001_pg1.png' width='1014px' height='1574px'/>
+			<zone points='820,54 947,54 947,104 820,104' rendition='TextRegion' subtype='marginalia' xml:id='facs_1_r_1'>
+				<zone points='828,92 936,93 936,63 828,62' rendition='Line' xml:id='facs_1_l'/>
+			</zone>
+			<zone points='316,67 556,67 556,137 316,137' rendition='TextRegion' subtype='chapter' xml:id='facs_1_r'>
+				<zone points='328,126 533,127 533,97 328,96' rendition='Line' xml:id='facs_1_l_1'/>
+			</zone>
+			<zone points='64,111 947,111 947,1529 64,1529' rendition='TextRegion' subtype='text' xml:id='facs_1_r_2'>
+				<zone points='134,180 900,155 899,125 133,150' rendition='Line' xml:id='facs_1_l_2'/>
+				<zone points='70,230 897,204 897,204 897,174 897,174 69,200' rendition='Line' xml:id='facs_1_l_3'/>
+				<zone points='333,197 509,197 509,167 333,167' rendition='Line' xml:id='facs_1_l_4'/>
+				<zone points='74,282 919,255 919,255 919,225 919,225 73,252' rendition='Line' xml:id='facs_1_l_5'/>
+				<zone points='237,249 316,244 314,214 235,219' rendition='Line' xml:id='facs_1_l_11'/>
+				<zone points='73,326 938,298 937,268 72,296' rendition='Line' xml:id='facs_1_l_6'/>
+				<zone points='71,371 925,335 924,305 70,341' rendition='Line' xml:id='facs_1_l_7'/>
+				<zone points='76,415 930,398 929,368 75,385' rendition='Line' xml:id='facs_1_l_8'/>
+				<zone points='779,374 829,373 828,343 778,344' rendition='Line' xml:id='facs_1_l_9'/>
+				<zone points='769,357 915,354 914,324 768,327' rendition='Line' xml:id='facs_1_l_10'/>
+				<zone points='80,461 929,438 928,408 79,431' rendition='Line' xml:id='facs_1_l_12'/>
+				<zone points='85,432 613,423 612,393 84,402' rendition='Line' xml:id='facs_1_l_13'/>
+				<zone points='73,516 931,484 930,454 72,486' rendition='Line' xml:id='facs_1_l_14'/>
+				<zone points='72,484 140,484 140,454 72,454' rendition='Line' xml:id='facs_1_l_15'/>
+				<zone points='617,471 923,455 921,425 615,441' rendition='Line' xml:id='facs_1_l_16'/>
+				<zone points='72,556 932,535 931,505 71,526' rendition='Line' xml:id='facs_1_l_17'/>
+				<zone points='79,532 887,511 886,481 78,502' rendition='Line' xml:id='facs_1_l_18'/>
+				<zone points='69,614 908,583 907,553 68,584' rendition='Line' xml:id='facs_1_l_19'/>
+				<zone points='89,587 926,561 925,531 88,557' rendition='Line' xml:id='facs_1_l_20'/>
+				<zone points='70,664 925,646 924,616 69,634' rendition='Line' xml:id='facs_1_l_21'/>
+				<zone points='459,628 610,625 609,595 458,598' rendition='Line' xml:id='facs_1_l_22'/>
+				<zone points='75,715 923,690 922,660 74,685' rendition='Line' xml:id='facs_1_l_23'/>
+				<zone points='78,760 940,747 940,717 78,730' rendition='Line' xml:id='facs_1_l_24'/>
+				<zone points='650,723 771,719 770,689 649,693' rendition='Line' xml:id='facs_1_l_25'/>
+				<zone points='72,813 933,799 933,769 72,783' rendition='Line' xml:id='facs_1_l_26'/>
+				<zone points='67,783 183,779 182,749 66,753' rendition='Line' xml:id='facs_1_l_27'/>
+				<zone points='75,863 918,844 917,814 74,833' rendition='Line' xml:id='facs_1_l_28'/>
+				<zone points='72,912 935,896 934,866 71,882' rendition='Line' xml:id='facs_1_l_29'/>
+				<zone points='114,882 220,881 220,851 114,852' rendition='Line' xml:id='facs_1_l_30'/>
+				<zone points='75,960 926,945 925,915 74,930' rendition='Line' xml:id='facs_1_l_31'/>
+				<zone points='80,1019 920,999 919,969 79,989' rendition='Line' xml:id='facs_1_l_32'/>
+				<zone points='79,1076 923,1054 922,1024 78,1046' rendition='Line' xml:id='facs_1_l_33'/>
+				<zone points='77,1127 929,1106 928,1076 76,1097' rendition='Line' xml:id='facs_1_l_34'/>
+				<zone points='76,1180 912,1154 911,1124 75,1150' rendition='Line' xml:id='facs_1_l_35'/>
+				<zone points='72,1238 929,1210 928,1180 71,1208' rendition='Line' xml:id='facs_1_l_36'/>
+				<zone points='491,1195 675,1188 674,1158 490,1165' rendition='Line' xml:id='facs_1_l_37'/>
+				<zone points='83,1297 906,1274 905,1244 82,1267' rendition='Line' xml:id='facs_1_l_38'/>
+				<zone points='83,1352 901,1329 900,1299 82,1322' rendition='Line' xml:id='facs_1_l_39'/>
+				<zone points='91,1405 925,1385 924,1355 90,1375' rendition='Line' xml:id='facs_1_l_40'/>
+				<zone points='123,1375 212,1372 211,1342 122,1345' rendition='Line' xml:id='facs_1_l_41'/>
+				<zone points='455,1372 750,1355 748,1325 453,1342' rendition='Line' xml:id='facs_1_l_42'/>
+				<zone points='99,1462 913,1447 912,1417 98,1432' rendition='Line' xml:id='facs_1_l_43'/>
+				<zone points='782,1411 919,1412 919,1382 782,1381' rendition='Line' xml:id='facs_1_l_44'/>
+				<zone points='104,1516 936,1509 936,1479 104,1486' rendition='Line' xml:id='facs_1_l_45'/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id='facs_3'>
+		<surface ulx='0' uly='0' lrx='1016' lry='1566'>
+			<graphic url='0003_pg3.png' width='1016px' height='1566px'/>
+			<zone points='67,48 974,48 974,1530 67,1530' rendition='TextRegion' subtype='text' xml:id='facs_3_r'>
+				<zone points='90,120 958,100 957,70 89,90' rendition='Line' xml:id='facs_3_l'/>
+				<zone points='81,164 950,143 949,113 80,134' rendition='Line' xml:id='facs_3_l_1'/>
+				<zone points='79,206 947,177 946,147 78,176' rendition='Line' xml:id='facs_3_l_3'/>
+				<zone points='79,248 951,224 950,194 78,218' rendition='Line' xml:id='facs_3_l_4'/>
+				<zone points='81,288 939,261 938,231 80,258' rendition='Line' xml:id='facs_3_l_5'/>
+				<zone points='102,264 378,254 377,224 101,234' rendition='Line' xml:id='facs_3_l_6'/>
+				<zone points='90,331 932,299 931,269 89,301' rendition='Line' xml:id='facs_3_l_7'/>
+				<zone points='77,378 932,342 931,312 76,348' rendition='Line' xml:id='facs_3_l_8'/>
+				<zone points='334,342 566,335 565,305 333,312' rendition='Line' xml:id='facs_3_l_9'/>
+				<zone points='749,322 853,317 852,287 748,292' rendition='Line' xml:id='facs_3_l_10'/>
+				<zone points='80,420 929,388 928,358 79,390' rendition='Line' xml:id='facs_3_l_11'/>
+				<zone points='77,469 952,430 951,400 76,439' rendition='Line' xml:id='facs_3_l_12'/>
+				<zone points='81,509 959,480 958,450 80,479' rendition='Line' xml:id='facs_3_l_13'/>
+				<zone points='80,555 944,516 943,486 79,525' rendition='Line' xml:id='facs_3_l_14'/>
+				<zone points='74,601 951,555 949,525 72,571' rendition='Line' xml:id='facs_3_l_15'/>
+				<zone points='76,643 956,597 954,567 74,613' rendition='Line' xml:id='facs_3_l_16'/>
+				<zone points='77,688 953,650 952,620 76,658' rendition='Line' xml:id='facs_3_l_17'/>
+				<zone points='577,635 863,618 861,588 575,605' rendition='Line' xml:id='facs_3_l_18'/>
+				<zone points='77,732 954,701 953,671 76,702' rendition='Line' xml:id='facs_3_l_19'/>
+				<zone points='71,786 941,738 939,708 69,756' rendition='Line' xml:id='facs_3_l_20'/>
+				<zone points='82,752 677,725 676,695 81,722' rendition='Line' xml:id='facs_3_l_21'/>
+				<zone points='77,832 944,784 942,754 75,802' rendition='Line' xml:id='facs_3_l_22'/>
+				<zone points='74,880 946,840 945,810 73,850' rendition='Line' xml:id='facs_3_l_23'/>
+				<zone points='80,930 892,890 891,860 79,900' rendition='Line' xml:id='facs_3_l_24'/>
+				<zone points='184,906 257,902 255,872 182,876' rendition='Line' xml:id='facs_3_l_25'/>
+				<zone points='76,977 923,936 922,906 75,947' rendition='Line' xml:id='facs_3_l_26'/>
+				<zone points='78,1032 949,992 948,962 77,1002' rendition='Line' xml:id='facs_3_l_27'/>
+				<zone points='178,997 291,991 289,961 176,967' rendition='Line' xml:id='facs_3_l_28'/>
+				<zone points='779,968 955,963 954,933 778,938' rendition='Line' xml:id='facs_3_l_29'/>
+				<zone points='78,1087 930,1053 929,1023 77,1057' rendition='Line' xml:id='facs_3_l_30'/>
+				<zone points='80,1133 932,1101 931,1071 79,1103' rendition='Line' xml:id='facs_3_l_31'/>
+				<zone points='80,1184 948,1151 947,1121 79,1154' rendition='Line' xml:id='facs_3_l_32'/>
+				<zone points='754,1127 937,1118 936,1088 753,1097' rendition='Line' xml:id='facs_3_l_33'/>
+				<zone points='84,1235 909,1208 908,1178 83,1205' rendition='Line' xml:id='facs_3_l_34'/>
+				<zone points='85,1206 908,1171 907,1141 84,1176' rendition='Line' xml:id='facs_3_l_35'/>
+				<zone points='79,1289 925,1267 924,1237 78,1259' rendition='Line' xml:id='facs_3_l_36'/>
+				<zone points='80,1346 942,1320 941,1290 79,1316' rendition='Line' xml:id='facs_3_l_37'/>
+				<zone points='84,1395 928,1376 928,1376 928,1376 928,1346 928,1346 928,1346 83,1365' rendition='Line' xml:id='facs_3_l_38'/>
+				<zone points='75,1451 908,1427 907,1397 74,1421' rendition='Line' xml:id='facs_3_l_39'/>
+				<zone points='97,1502 920,1485 919,1455 96,1472' rendition='Line' xml:id='facs_3_l_40'/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id='facs_14'>
+		<surface ulx='0' uly='0' lrx='600' lry='949'>
+			<graphic url='0014_p.14.jpg' width='600px' height='949px'/>
+			<zone points='22,19 22,937 582,937 582,19' rendition='TextRegion' subtype='text' xml:id='facs_14_tr_1'>
+				<zone points='29,57 74,70 384,43 569,54 570,12 30,0' rendition='Line' xml:id='facs_14_tr_1_tl_1'/>
+				<zone points='17,85 541,75 563,72 564,47 186,50 73,70 18,51' rendition='Line' xml:id='facs_14_tr_1_tl_2'/>
+				<zone points='24,126 99,107 564,104 565,76 321,88 214,73 25,95' rendition='Line' xml:id='facs_14_tr_1_tl_3'/>
+				<zone points='21,139 145,155 313,128 542,131 537,91 22,125' rendition='Line' xml:id='facs_14_tr_1_tl_4'/>
+				<zone points='20,168 179,179 557,159 569,116 145,155 21,143' rendition='Line' xml:id='facs_14_tr_1_tl_5'/>
+				<zone points='25,202 386,206 448,185 480,200 573,186 574,157 525,148 353,180 26,173' rendition='Line' xml:id='facs_14_tr_1_tl_6'/>
+				<zone points='24,235 191,231 226,253 344,219 562,216 556,181 481,199 327,192 297,214 223,196 25,211' rendition='Line' xml:id='facs_14_tr_1_tl_7'/>
+				<zone points='26,276 565,248 566,216 527,211 242,243 28,236' rendition='Line' xml:id='facs_14_tr_1_tl_8'/>
+				<zone points='24,311 58,295 177,308 272,286 409,300 468,277 575,280 576,253 553,247 437,265 409,251 366,272 274,259 26,276' rendition='Line' xml:id='facs_14_tr_1_tl_9'/>
+				<zone points='27,340 574,314 575,281 493,277 407,300 275,288 28,309' rendition='Line' xml:id='facs_14_tr_1_tl_10'/>
+				<zone points='27,360 579,354 581,318 27,339' rendition='Line' xml:id='facs_14_tr_1_tl_11'/>
+				<zone points='24,389 566,371 567,348 535,343 25,369' rendition='Line' xml:id='facs_14_tr_1_tl_12'/>
+				<zone points='20,420 280,423 348,409 430,420 431,386 419,384 288,385 249,403 134,385 69,408 21,388' rendition='Line' xml:id='facs_14_tr_1_tl_14'/>
+				<zone points='23,452 351,454 420,436 437,445 438,422 390,410 229,429 211,417 24,421' rendition='Line' xml:id='facs_14_tr_1_tl_15'/>
+				<zone points='429,417 554,415 554,385 429,387' rendition='Line' xml:id='facs_14_l'/>
+				<zone points='44,484 573,477 574,444 45,450' rendition='Line' xml:id='facs_14_tr_1_tl_16'/>
+				<zone points='61,466 129,464 128,434 60,436' rendition='Line' xml:id='facs_14_l_1'/>
+				<zone points='16,525 151,512 188,530 212,512 340,507 442,520 474,500 569,504 570,484 520,469 431,489 17,491' rendition='Line' xml:id='facs_14_tr_1_tl_17'/>
+				<zone points='22,553 389,541 418,555 560,535 561,504 479,499 441,520 321,507 189,529 159,513 127,536 83,517 23,530' rendition='Line' xml:id='facs_14_tr_1_tl_19'/>
+				<zone points='93,539 100,539 112,527 117,525 121,525 125,529 129,525 138,525 138,514 129,514 126,512 119,514 116,513 114,515 103,514 93,516' rendition='Line' xml:id='facs_14_tr_1_tl_18'/>
+				<zone points='22,593 511,586 564,578 565,558 529,532 412,558 23,554' rendition='Line' xml:id='facs_14_tr_1_tl_20'/>
+				<zone points='21,615 296,630 551,604 563,579 402,575 369,592 291,577 208,602 103,579 22,593' rendition='Line' xml:id='facs_14_tr_1_tl_21'/>
+				<zone points='24,653 281,646 414,669 449,640 564,643 565,619 526,602 377,609 348,632 25,617' rendition='Line' xml:id='facs_14_tr_1_tl_22'/>
+				<zone points='198,678 378,687 464,674 498,693 567,680 561,643 449,640 412,668 309,652 298,662 281,647 198,656' rendition='Line' xml:id='facs_14_tr_1_tl_23'/>
+				<zone points='25,731 49,720 63,727 116,717 140,729 236,714 258,726 300,722 300,694 282,693 221,703 180,694 157,706 138,696 107,706 65,698 26,709' rendition='Line' xml:id='facs_14_tr_1_tl_28'/>
+				<zone points='25,715 64,699 72,706 146,699 154,707 181,693 219,703 257,696 258,683 229,685 195,668 177,682 156,678 129,688 26,685' rendition='Line' xml:id='facs_14_tr_1_tl_26'/>
+				<zone points='31,754 572,732 573,713 516,706 416,727 33,722' rendition='Line' xml:id='facs_14_tr_1_tl_29'/>
+				<zone points='25,784 312,771 336,790 528,766 575,792 576,747 502,736 298,761 204,745 26,758' rendition='Line' xml:id='facs_14_tr_1_tl_31'/>
+				<zone points='233,759 264,761 275,757 280,761 289,757 295,760 305,756 320,756 320,742 315,741 289,744 284,749 275,742 264,749 251,748 248,744 233,748' rendition='Line' xml:id='facs_14_tr_1_tl_30'/>
+				<zone points='25,815 497,793 539,807 553,774 25,789' rendition='Line' xml:id='facs_14_tr_1_tl_32'/>
+				<zone points='23,841 534,830 567,827 568,797 23,818' rendition='Line' xml:id='facs_14_tr_1_tl_33'/>
+				<zone points='24,878 568,847 519,822 25,848' rendition='Line' xml:id='facs_14_tr_1_tl_34'/>
+				<zone points='26,897 286,888 324,908 467,877 567,888 568,847 536,846 395,870 120,861 27,883' rendition='Line' xml:id='facs_14_tr_1_tl_35'/>
+				<zone points='131,935 264,925 355,947 381,929 527,932 551,919 551,882 494,878 324,908 280,889 132,905' rendition='Line' xml:id='facs_14_tr_1_tl_36'/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id='facs_15'>
+		<surface ulx='0' uly='0' lrx='600' lry='956'>
+			<graphic url='0015_p.15.jpg' width='600px' height='956px'/>
+			<zone points='23,21 23,927 574,927 574,21' rendition='TextRegion' subtype='text' xml:id='facs_15_tr_1'>
+				<zone points='25,65 518,43 520,0 143,22 28,10' rendition='Line' xml:id='facs_15_tr_1_tl_1'/>
+				<zone points='23,91 67,107 99,88 213,81 226,95 280,79 300,97 362,72 415,90 551,67 552,49 518,41 25,65' rendition='Line' xml:id='facs_15_tr_1_tl_2'/>
+				<zone points='21,132 558,94 559,68 521,64 415,90 370,72 303,95 280,79 225,96 137,85 67,107 23,90' rendition='Line' xml:id='facs_15_tr_1_tl_3'/>
+				<zone points='19,159 445,123 529,136 564,124 566,94 204,108 94,137 70,118 21,127' rendition='Line' xml:id='facs_15_tr_1_tl_4'/>
+				<zone points='52,170 560,153 561,129 449,122 366,142 278,132 53,153' rendition='Line' xml:id='facs_15_tr_1_tl_5'/>
+				<zone points='17,207 559,181 561,153 449,150 19,179' rendition='Line' xml:id='facs_15_tr_1_tl_6'/>
+				<zone points='23,244 48,226 562,202 563,180 491,172 134,209 26,202' rendition='Line' xml:id='facs_15_tr_1_tl_7'/>
+				<zone points='23,263 108,251 150,275 199,247 547,227 548,204 478,199 235,231 48,227 24,243' rendition='Line' xml:id='facs_15_tr_1_tl_8'/>
+				<zone points='28,296 553,259 555,231 507,224 260,261 216,246 31,260' rendition='Line' xml:id='facs_15_tr_1_tl_9'/>
+				<zone points='20,315 517,296 556,289 558,261 513,277 391,264 145,292 51,282 21,298' rendition='Line' xml:id='facs_15_tr_1_tl_10'/>
+				<zone points='22,350 563,324 565,295 535,284 464,305 24,322' rendition='Line' xml:id='facs_15_tr_1_tl_11'/>
+				<zone points='24,374 572,353 574,315 25,350' rendition='Line' xml:id='facs_15_tr_1_tl_12'/>
+				<zone points='31,406 178,406 225,388 275,406 316,384 450,377 562,387 564,350 281,358 237,379 201,358 32,371' rendition='Line' xml:id='facs_15_tr_1_tl_13'/>
+				<zone points='25,434 378,415 379,387 356,394 342,382 278,405 259,389 227,388 178,406 71,395 26,411' rendition='Line' xml:id='facs_15_tr_1_tl_15'/>
+				<zone points='28,466 425,443 436,409 248,440 29,435' rendition='Line' xml:id='facs_15_tr_1_tl_20'/>
+				<zone points='38,444 80,438 108,443 117,437 132,444 142,437 168,437 195,446 195,427 179,421 119,428 95,423 88,430 80,425 71,432 58,425 38,428' rendition='Line' xml:id='facs_15_tr_1_tl_19'/>
+				<zone points='27,489 67,503 161,482 490,477 557,467 559,439 28,467' rendition='Line' xml:id='facs_15_tr_1_tl_21'/>
+				<zone points='23,526 241,531 304,508 559,504 561,469 95,486 58,506 25,492' rendition='Line' xml:id='facs_15_tr_1_tl_22'/>
+				<zone points='24,552 207,561 235,544 562,525 563,503 485,498 305,507 261,530 26,526' rendition='Line' xml:id='facs_15_tr_1_tl_23'/>
+				<zone points='25,589 232,573 252,592 304,572 424,580 565,554 566,527 544,521 455,543 234,544 201,562 27,554' rendition='Line' xml:id='facs_15_tr_1_tl_24'/>
+				<zone points='29,628 572,589 573,566 524,560 418,585 339,569 251,592 221,576 178,602 32,582' rendition='Line' xml:id='facs_15_tr_1_tl_26'/>
+				<zone points='77,597 93,595 95,598 101,593 105,597 108,594 115,597 120,594 138,595 146,602 163,599 163,581 145,581 139,576 128,581 99,578 85,588 77,588' rendition='Line' xml:id='facs_15_tr_1_tl_25'/>
+				<zone points='412,581 437,578 433,548 408,551' rendition='Line' xml:id='facs_15_l'/>
+				<zone points='28,654 517,621 518,600 448,593 419,611 338,601 30,628' rendition='Line' xml:id='facs_15_tr_1_tl_28'/>
+				<zone points='25,674 238,678 441,655 494,671 545,658 547,619 414,642 384,627 235,651 26,652' rendition='Line' xml:id='facs_15_tr_1_tl_29'/>
+				<zone points='424,638 429,639 433,635 438,637 440,636 444,639 448,637 450,639 468,637 468,622 459,623 454,621 450,624 448,622 438,622 430,625 424,624' rendition='Line' xml:id='facs_15_tr_1_tl_27'/>
+				<zone points='23,715 170,717 225,697 265,712 387,688 441,701 472,683 556,687 558,658 25,681' rendition='Line' xml:id='facs_15_tr_1_tl_30'/>
+				<zone points='31,741 570,716 571,683 549,679 450,701 387,688 264,713 227,696 32,722' rendition='Line' xml:id='facs_15_tr_1_tl_31'/>
+				<zone points='203,715 278,708 275,678 200,685' rendition='Line' xml:id='facs_15_l_1'/>
+				<zone points='37,781 123,769 161,784 259,760 329,775 520,748 561,760 563,720 211,733 180,754 39,744' rendition='Line' xml:id='facs_15_tr_1_tl_32'/>
+				<zone points='30,817 183,814 229,794 306,808 494,793 542,779 544,752 32,784' rendition='Line' xml:id='facs_15_tr_1_tl_33'/>
+				<zone points='35,849 338,823 430,836 538,814 540,780 478,800 211,796 184,816 37,814' rendition='Line' xml:id='facs_15_tr_1_tl_34'/>
+				<zone points='30,870 139,869 155,886 420,854 478,870 555,855 557,809 430,838 31,846' rendition='Line' xml:id='facs_15_tr_1_tl_35'/>
+				<zone points='385,837 429,835 428,805 384,807' rendition='Line' xml:id='facs_15_l_2'/>
+				<zone points='36,902 57,904 71,912 100,914 106,919 118,912 158,917 158,882 120,880 105,890 96,883 89,886 73,882 65,875 36,878' rendition='Line' xml:id='facs_15_tr_1_tl_41'/>
+				<zone points='92,884 99,884 106,890 116,881 121,880 125,883 131,883 138,879 151,879 151,871 142,871 139,868 130,871 123,867 117,868 114,871 107,871 103,868 92,869' rendition='Line' xml:id='facs_15_tr_1_tl_36'/>
+				<zone points='448,928 456,928 460,930 462,928 465,929 472,924 479,925 479,892 455,892 453,890 448,890' rendition='Line' xml:id='facs_15_tr_1_tl_42'/>
+			</zone>
+		</surface>
+	</facsimile>
+	<text>
+		<body>
+			<div>
+				<pb facs='#facs_1' n='1'/>
+				<p facs='#facs_1_r_1'>
+					<lg>
+						<l facs='#facs_1_l'>July 8</l>
+					</lg>
+				</p>
+				<p facs='#facs_1_r'>
+					<lg>
+						<l facs='#facs_1_l_1'>Chap. 10.</l>
+					</lg>
+				</p>
+				<p facs='#facs_1_r_2'>
+					<lg>
+						<l facs='#facs_1_l_2'>With all this knowledge of <persName ref='#ME'>Mr . E</persName> –</l>
+						<l facs='#facs_1_l_3'>&amp; <del rend='strikethrough'>with</del> this <del rend='strikethrough'><term ref='#SOCIAL'>power</term> of </del>impart<del rend='strikethrough'>ing</del> it, </l>
+						<l facs='#facs_1_l_4'><add place='supralinear'><term ref='#SOCIAL'>authority</term> to</add></l>
+						<l facs='#facs_1_l_5'><persName ref='#AN'>Anne</persName> <del rend='strikethrough'>quitted</del> <placeName ref='WB'>Westgate Buildgs</placeName> — her </l>
+						<l facs='#facs_1_l_11'><add place='supralinear'>left</add></l>
+						<l facs='#facs_1_l_6'>mind deeply busy in revolving what she </l>
+						<l facs='#facs_1_l_7'>had heard, feeling, thinking, recalling </l>
+						<l facs='#facs_1_l_8'>&amp; forseeing everything, shocked <del rend='strikethrough'>about</del> </l>
+						<l facs='#facs_1_l_9'><add place='supralinear'>at</add></l>
+						<l facs='#facs_1_l_10'><add place='supralinear'><del rend='strikethrough'>by what</del></add></l>
+						<l facs='#facs_1_l_12'><del rend='strikethrough'><persName ref='#ME'>Mr. Elliot</persName></del>, <term ref='#ECON'>sighing over future <placeName ref='KH'>Kellynch</placeName></term> </l>
+						<l facs='#facs_1_l_13'><add place='supralinear'><del rend='strikethrough'>she had heard about</del> <persName ref='#ME'>Mr Elliot</persName> —</add></l>
+						<l facs='#facs_1_l_14'><term ref='#ETHIC'>pained</term> for <persName ref='#LR'>Lady Ruſsell</persName>, <del rend='strikethrough'>&amp; glancing with</del></l>
+						<l facs='#facs_1_l_15'><add place='supralinear'>and</add></l>
+						<l facs='#facs_1_l_16'><add place='supralinear'><del rend='strikethrough'>&amp; greiving with</del></add></l>
+						<l facs='#facs_1_l_17'><del rend='strikethrough'>composed Complacency &amp; Lenient Triumph</del></l>
+						<l facs='#facs_1_l_18'><add place='supralinear'><del rend='strikethrough'>complacency or triumphing with concern</del></add></l>
+						<l facs='#facs_1_l_19'><del rend='strikethrough'>upon the fact of her having been</del> </l>
+						<l facs='#facs_1_l_20'><add place='supralinear'><del rend='strikethrough'>that Events should only now have shown her</del></add></l>
+						<l facs='#facs_1_l_21'><del rend='strikethrough'>right &amp; <persName ref='#LR'>Lady R</persName> wrong, the most dis:</del></l>
+						<l facs='#facs_1_l_22'><add place='supralinear'><del rend='strikethrough'>herself</del></add></l>
+						<l facs='#facs_1_l_23'><del rend='strikethrough'>:criminating of the two. She had never</del></l>
+						<l facs='#facs_1_l_24'><del rend='strikethrough'>been satisfied. <persName ref='#LR'>Lady Ruſsell</persName>&apos;s</del> confidence</l>
+						<l facs='#facs_1_l_25'><add place='supralinear'>whose</add></l>
+						<l facs='#facs_1_l_26'>had been entire. —<del rend='strikethrough'>But</del>,<term ref='#ETHIC'>The Embarraſs</term>:</l>
+						<l facs='#facs_1_l_27'><add place='supralinear'>in him</add></l>
+						<l facs='#facs_1_l_28'>:<term ref='#ETHIC'>ment</term> which must be felt from this</l>
+						<l facs='#facs_1_l_29'><del rend='strikethrough'>moment</del> in his presence! — How to be:</l>
+						<l facs='#facs_1_l_30'><add place='supralinear'>hour</add></l>
+						<l facs='#facs_1_l_31'>:have to him? — how to get rid of him? —</l>
+						<l facs='#facs_1_l_32'>What to do by any of the <term ref='#SOCIAL'>Party</term> at</l>
+						<l facs='#facs_1_l_33'>home? — where to be blind? — where</l>
+						<l facs='#facs_1_l_34'>to be active? — It was altogether a</l>
+						<l facs='#facs_1_l_35'>confusion of Images &amp; Doubts — a</l>
+						<l facs='#facs_1_l_36'><term ref='#ETHIC'>perplexity</term>, an <del rend='strikethrough'><term ref='#ETHIC'>Embarraſsment</term></del> which</l>
+						<l facs='#facs_1_l_37'><add place='supralinear'><term ref='#ETHIC'>Agitation</term></add></l>
+						<l facs='#facs_1_l_38'>she could not see the end of <del rend='strikethrough'>it</del>—</l>
+						<l facs='#facs_1_l_39'>And she was in <placeName ref='#GS'>Gay St</placeName> - — &amp; still so</l>
+						<l facs='#facs_1_l_40'><del rend='strikethrough'>far</del> engroſsed, <del rend='strikethrough'>as to start at</del> being</l>
+						<l facs='#facs_1_l_41'><add place='supralinear'>much</add></l>
+						<l facs='#facs_1_l_42'><add place='supralinear'>that she started on</add></l>
+						<l facs='#facs_1_l_43'>addreſsed by <persName ref='#AC'>Adml . Croft</persName>, as if a</l>
+						<l facs='#facs_1_l_44'><add place='supralinear'>he were</add></l>
+						<l facs='#facs_1_l_45'>person unlikely to be met there.</l>
+					</lg>
+				</p>
+				<pb facs='#facs_3' n='3'/>
+				<p facs='#facs_3_r'>
+					<lg>
+						<l facs='#facs_3_l'>&quot;Her Mantuamaker! —then I am</l>
+						<l facs='#facs_3_l_1'>sure my <term ref='#COMM'>calling</term> now, wd . be most</l>
+						<l facs='#facs_3_l_3'>inconvenient. — Indeed you must</l>
+						<l facs='#facs_3_l_4'>allow me <del rend='strikethrough'>merely</del> to leave my <term ref='#COMM'>Card</term></l>
+						<l facs='#facs_3_l_5'>&amp; explain it afterwards to <persName ref='#MC'>Mrs . C.</persName>&quot;</l>
+						<l facs='#facs_3_l_6'><add place='supralinear'>be so good as to</add></l>
+						<l facs='#facs_3_l_7'>&quot;No, no, not at all, not at all.</l>
+						<l facs='#facs_3_l_8'>She will be <del rend='strikethrough'>glad</del> to see you. I</l>
+						<l facs='#facs_3_l_9'><add place='supralinear'><term ref='#ETHIC'>very happy</term></add></l>
+						<l facs='#facs_3_l_10'><add place='supralinear'>Mind — </add></l>
+						<l facs='#facs_3_l_11'>will not swear that she has not</l>
+						<l facs='#facs_3_l_12'>something particular to say to you —</l>
+						<l facs='#facs_3_l_13'>but that will all come out in the</l>
+						<l facs='#facs_3_l_14'>right place. I give no hints. –––</l>
+						<l facs='#facs_3_l_15'>Why, <persName ref='#EE'>Miſs Elliot</persName>, <term ref='#SOCIAL'>we begin to hear</term></l>
+						<l facs='#facs_3_l_16'><term ref='#SOCIAL'>strange things of you</term> — (smiling in</l>
+						<l facs='#facs_3_l_17'>her face) — But <del rend='strikethrough'>I do not see</del> much</l>
+						<l facs='#facs_3_l_18'><add place='supralinear'>you have not</add></l>
+						<l facs='#facs_3_l_19'>the Look of it <del rend='strikethrough'>in your Countenance.&quot;</del></l>
+						<l facs='#facs_3_l_20'><persName ref='#AN'>Anne</persName><term ref='#ETHIC'>blushed</term>. — &quot;Aye, aye, that</l>
+						<l facs='#facs_3_l_21'><add place='supralinear'>as Grave as a little Judge.&quot; —</add></l>
+						<l facs='#facs_3_l_22'>will do. Now, it is <del rend='strikethrough'>all</del> right. I</l>
+						<l facs='#facs_3_l_23'>thought we were not mistaken.&quot;</l>
+						<l facs='#facs_3_l_24'><del rend='strikethrough'><persName ref='#AN'>Anne</persName></del> was left to gueſs at the</l>
+						<l facs='#facs_3_l_25'><add place='supralinear'>She</add></l>
+						<l facs='#facs_3_l_26'>direction of his <term ref='#SOCIAL'>Suspicions</term>; — the</l>
+						<l facs='#facs_3_l_27'>first idea had been of some <del rend='strikethrough'>con</del>:</l>
+						<l facs='#facs_3_l_28'><add place='supralinear'>wild</add></l>
+						<l facs='#facs_3_l_29'><add place='supralinear'>disclosure</add></l>
+						<l facs='#facs_3_l_30'><del rend='strikethrough'>:feſsion of the past</del> from his Br -</l>
+						<l facs='#facs_3_l_31'>in law — but she was <term ref='#ETHIC'>ashamed</term></l>
+						<l facs='#facs_3_l_32'>the next moment — &amp; felt <del rend='strikethrough'>that it</del></l>
+						<l facs='#facs_3_l_33'><add place='supralinear'>how far</add></l>
+						<l facs='#facs_3_l_34'><del rend='strikethrough'>he must in all probability</del> be</l>
+						<l facs='#facs_3_l_35'><add place='supralinear'>more probable<del rend='strikethrough'>it was</del> that he should</add></l>
+						<l facs='#facs_3_l_36'>meaning <persName ref='#ME'>Mr . E</persName>.––– The door was</l>
+						<l facs='#facs_3_l_37'>opened — &amp; the Man<del rend='strikethrough'>was</del> evidently</l>
+						<l facs='#facs_3_l_38'>beginning to deny his Mistreſs,</l>
+						<l facs='#facs_3_l_39'>when the sight of his Master</l>
+						<l facs='#facs_3_l_40'>stopped him. <persName ref='#AC'>The Adml</persName> . enjoyed</l>
+					</lg>
+				</p>
+				<pb facs='#facs_14' n='14'/>
+				<p facs='#facs_14_tr_1'>
+					<lg>
+						<l facs='#facs_14_tr_1_tl_1'>had his <term ref='#ETHIC'>penance</term> been the most</l>
+						<l facs='#facs_14_tr_1_tl_2'>severe. — He had no sooner been</l>
+						<l facs='#facs_14_tr_1_tl_3'>free from the <term ref='#ETHIC'>horror</term> &amp; <term ref='#ETHIC'>remorse</term></l>
+						<l facs='#facs_14_tr_1_tl_4'>attending the first few days of</l>
+						<l facs='#facs_14_tr_1_tl_5'><persName ref='#LM'>Louisa</persName>&apos;s accident, no sooner begun</l>
+						<l facs='#facs_14_tr_1_tl_6'>to feel himself alive again, than</l>
+						<l facs='#facs_14_tr_1_tl_7'>he had <del rend='strikethrough'>had</del> begun to fell himself</l>
+						<l facs='#facs_14_tr_1_tl_8'>though alive, not at liberty. — He</l>
+						<l facs='#facs_14_tr_1_tl_9'>found that he was considered by his</l>
+						<l facs='#facs_14_tr_1_tl_10'>freind <persName ref='#CH'>Harville</persName>, as an <term ref='#SOCIAL'>engaged</term> Man.</l>
+						<l facs='#facs_14_tr_1_tl_11'>The Harvilles entertained not a doubt</l>
+						<l facs='#facs_14_tr_1_tl_12'>of a <term ref='#SOCIAL'>mutual attachment</term> between</l>
+						<l facs='#facs_14_tr_1_tl_14'>him &amp; <persName ref='#LM'>Louisa</persName> — and though this,</l>
+						<l facs='#facs_14_tr_1_tl_15'>to a degree, was contradicted to <del rend='strikethrough'>them</del>,</l>
+						<l facs='#facs_14_l'><add place='supralinear'>instantly</add></l>
+						<l facs='#facs_14_tr_1_tl_16'>— it made him feel that perhaps by</l>
+						<l facs='#facs_14_l_1'><add place='supralinear'>yet</add></l>
+						<l facs='#facs_14_tr_1_tl_17'>her <term ref='#SOCIAL'>family</term>, by everybody, by her:</l>
+						<l facs='#facs_14_tr_1_tl_19'>:self, the same idea might be</l>
+						<l facs='#facs_14_tr_1_tl_18'><add place='supralinear'>even</add></l>
+						<l facs='#facs_14_tr_1_tl_20'>held — and that he was not free</l>
+						<l facs='#facs_14_tr_1_tl_21'>in <term ref='#SOCIAL'>honour</term> – though, if such were</l>
+						<l facs='#facs_14_tr_1_tl_22'>to be the conclusion, too free alas!</l>
+						<l facs='#facs_14_tr_1_tl_23'>in <term ref='#ETHIC'>Heart</term>. — He had never thought</l>
+						<l facs='#facs_14_tr_1_tl_28'><del rend='strikethrough'>before, of what, his as he ought,</del></l>
+						<l facs='#facs_14_tr_1_tl_26'><add place='supralinear'>justly on this subject before —</add></l>
+						<l facs='#facs_14_tr_1_tl_29'><del rend='strikethrough'>His leaving <placeName ref='#LYME'>Lyme</placeName> had been the con:</del></l>
+						<l facs='#facs_14_tr_1_tl_31'><del rend='strikethrough'>:sequence of never</del> sufficiently consi:</l>
+						<l facs='#facs_14_tr_1_tl_30'><add place='supralinear'>he had not</add></l>
+						<l facs='#facs_14_tr_1_tl_32'>:dered that his exceſsive <term ref='#SOCIAL'>Intimacy</term></l>
+						<l facs='#facs_14_tr_1_tl_33'>at <placeName ref='#UC'>Uppercroſs</placeName> must have it&apos;s danger</l>
+						<l facs='#facs_14_tr_1_tl_34'>of ill consequence in many ways,</l>
+						<l facs='#facs_14_tr_1_tl_35'>and that while trying whether</l>
+						<l facs='#facs_14_tr_1_tl_36'>he cd . <term ref='#SOCIAL'>attach himself</term> to either</l>
+					</lg>
+				</p>
+				<pb facs='#facs_15' n='15'/>
+				<p facs='#facs_15_tr_1'>
+					<lg>
+						<l facs='#facs_15_tr_1_tl_1'>of the Girls, he might be exciting</l>
+						<l facs='#facs_15_tr_1_tl_2'><term ref='#SOCIAL'>unpleasant reports</term>, if not, raising</l>
+						<l facs='#facs_15_tr_1_tl_3'>unrequited regard! — He found, too</l>
+						<l facs='#facs_15_tr_1_tl_4'>late, that he <term ref='#SOCIAL'>had entangled</term> himself</l>
+						<l facs='#facs_15_tr_1_tl_5'>— and that precisely, as he became</l>
+						<l facs='#facs_15_tr_1_tl_6'>thoroughly satisfied of his not caring</l>
+						<l facs='#facs_15_tr_1_tl_7'>for <persName ref='#LM'>Louisa</persName> at all, he must regard</l>
+						<l facs='#facs_15_tr_1_tl_8'>himself as bound to her, if her</l>
+						<l facs='#facs_15_tr_1_tl_9'>feelings for him, were what the</l>
+						<l facs='#facs_15_tr_1_tl_10'>Harvilles supposed. — It determined</l>
+						<l facs='#facs_15_tr_1_tl_11'>him to leave <placeName ref='#LM'>Lyme</placeName> — &amp; await her</l>
+						<l facs='#facs_15_tr_1_tl_12'>perfect recovery elsewhere. He would</l>
+						<l facs='#facs_15_tr_1_tl_13'>gladly weaken, by any fair means,</l>
+						<l facs='#facs_15_tr_1_tl_15'><term ref='#SOCIAL'>whatever Sentiments or Speculations</term></l>
+						<l facs='#facs_15_tr_1_tl_20'><term ref='#SOCIAL'>concerning him might exist</term>; — mean:</l>
+						<l facs='#facs_15_tr_1_tl_19'><add place='supralinear'>and he went therefore into <placeName ref='#SS'>Shropshire</placeName></add></l>
+						<l facs='#facs_15_tr_1_tl_21'>:ing after a while, to return to the</l>
+						<l facs='#facs_15_tr_1_tl_22'>Crofts at <placeName ref='#KH'>Kellynch</placeName>, &amp; <del rend='strikethrough'>then</del> act as</l>
+						<l facs='#facs_15_tr_1_tl_23'>he found requisite. ––– He had re:</l>
+						<l facs='#facs_15_tr_1_tl_24'>:mained in <placeName ref='#SS'>Shropshire</placeName>, lamenting the</l>
+						<l facs='#facs_15_tr_1_tl_26'><del rend='strikethrough'>blunders</del> of his own <term ref='#ETHIC'>Pride</term>, the Blun:</l>
+						<l facs='#facs_15_tr_1_tl_25'><add place='supralinear'><term ref='#ETHIC'>Blindneſs</term></add></l>
+						<l facs='#facs_15_l'><add place='supralinear'>&amp;</add></l>
+						<l facs='#facs_15_tr_1_tl_28'>:ders of his own <term ref='#ECON'>Calculations</term>, till</l>
+						<l facs='#facs_15_tr_1_tl_29'>at once released from <del rend='strikethrough'><placeName ref='#UC'>Uppercroſs</placeName></del></l>
+						<l facs='#facs_15_tr_1_tl_27'><add place='supralinear'><persName ref='#LM'>Louisa</persName></add></l>
+						<l facs='#facs_15_tr_1_tl_30'>by the astonishing felicity of her</l>
+						<l facs='#facs_15_tr_1_tl_31'><term ref='#SOCIAL'>engagement</term> <del rend='strikethrough'>to</del> <persName ref='#CB'>Benwicke</persName>. –<del rend='strikethrough'>To</del> <placeName ref='#BATH'>Bath</placeName>,</l>
+						<l facs='#facs_15_l_1'><add place='supralinear'>with</add></l>
+						<l facs='#facs_15_tr_1_tl_32'><del rend='strikethrough'>To</del> <placeName ref='#BATH'>Bath</placeName> — had instantly followed, in</l>
+						<l facs='#facs_15_tr_1_tl_33'>Thought; &amp; not long after, in fact.</l>
+						<l facs='#facs_15_tr_1_tl_34'>To <placeName ref='#BATH'>Bath</placeName>, to arrive with <term ref='#ETHIC'>Hope</term>.</l>
+						<l facs='#facs_15_tr_1_tl_35'>to be torn by <term ref='#ETHIC'>Jealousy</term><del rend='strikethrough'>at</del> the first</l>
+						<l facs='#facs_15_l_2'><add place='supralinear'>at</add></l>
+						<l facs='#facs_15_tr_1_tl_41'><del rend='strikethrough'>re-appearance</del> of <persName ref='#ME'>Mr . E</persName> –––, to expe:</l>
+						<l facs='#facs_15_tr_1_tl_36'><add place='supralinear'>sight</add></l>
+						<l facs='#facs_15_tr_1_tl_42'>:rience</l>
+					</lg>
+				</p>
+			</div>
+		</body>
+	</text>
+</TEI>

@@ -88,52 +88,154 @@ document.addEventListener('DOMContentLoaded', () => {
     const manuscriptNextBtn = document.getElementById('next-btn');
 
     if (manuscriptImg && transcriptionText) {
+        let persuasionXml = null;
+        let persuasionXsl = null;
+
         const manuscriptPages = [
             {
                 pageNum: 1,
                 img: "img/persuasion/p.1.jpg",
-                transcription: `
-                    <p>My dear Cassandra,</p>
-                    <p>You will be surprised to hear that I am once again at my desk. The weather has been most unpropitious for walking, and I find myself drawn back to the quiet of my studies. Persuasion is a curious thing, is it not? How the heart maintains its course despite the passing years...</p>
-                    <p>Yesterday, we received word from the Musgroves. They are all well, though Mary continues to complain of her delicate health. Anne seems the only one with any true sense in that household.</p>
-                `
+                facs: "#facs_1"
             },
             {
                 pageNum: 3,
                 img: "img/persuasion/p.3.jpg",
-                transcription: `
-                    <p>Lyme Regis provided a much-needed change of scene. The sea air is bracing, and the company of the Harvilles is a true relief from the endless social posturing of Bath. Louisa's unfortunate accident on the Cobb has cast a shadow over our stay, yet it has also revealed much about the character of those around us.</p>
-                    <p>Captain Wentworth's concern for her was evident, yet I could not help but feel a pang of... what? Not jealousy, surely. Perhaps merely a reflection on what might have been, had circumstances been different.</p>
-                `
+                facs: "#facs_3"
             },
             {
                 pageNum: 14,
                 img: "img/persuasion/p.14.jpg",
-                transcription: `
-                    <p>Bath is as crowded and superficial as ever. I find myself longing for the simple pleasures of Uppercross, despite the frequent complaints of my sisters. The social whirl here is exhausting, and the constant attention to rank and fortune is wearying to the soul.</p>
-                    <p>I saw Mr. Elliot in the Pump Room today. He is a man of undeniable charm and elegance, yet there is something about his character that remains opaque to me. I cannot quite trust the ease with which he navigates these social waters.</p>
-                `
+                facs: "#facs_14"
             },
             {
                 pageNum: 15,
                 img: "img/persuasion/p.15.jpg",
-                transcription: `
-                    <p>I can no longer listen in silence. I must speak to you by such means as are within my reach. You pierce my soul. I am half agony, half hope. Tell me not that I am too late, that such precious feelings are gone for ever. I offer myself to you again with a heart even more your own than when you almost broke it, eight years and a half ago.</p>
-                    <p>I have loved none but you. Unjust I may have been, weak and resentful I have been, but never inconstant. You alone have brought me to Bath. For you alone, I think and plan. Have you not seen this? Can you fail to have understood my wishes?</p>
-                `
+                facs: "#facs_15"
             }
         ];
 
         let currentManuscriptPage = 0;
+        let activeOverlay = null;
+
+        async function initTranscription() {
+            try {
+                const [xmlResponse, xslResponse] = await Promise.all([
+                    fetch('persuasion.xml'),
+                    fetch('persuasion.xsl')
+                ]);
+                const xmlText = await xmlResponse.text();
+                const xslText = await xslResponse.text();
+
+                const parser = new DOMParser();
+                persuasionXml = parser.parseFromString(xmlText, 'text/xml');
+                persuasionXsl = parser.parseFromString(xslText, 'text/xml');
+
+                updateManuscriptPage();
+
+                // Add event listener for line clicks (using delegation)
+                transcriptionText.addEventListener('click', (e) => {
+                    const line = e.target.closest('.transcription-line, .transcription-p');
+                    if (line && line.dataset.facs) {
+                        highlightLine(line.dataset.facs, line);
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading transcription files:', error);
+                transcriptionText.innerHTML = '<p class="error-msg">Error loading digital transcription. Please ensure persuasion.xml and persuasion.xsl are available.</p>';
+            }
+        }
+
+        function highlightLine(facsId, lineElement) {
+            // Remove previous highlights
+            document.querySelectorAll('.transcription-line.active').forEach(l => l.classList.remove('active'));
+            if (activeOverlay) {
+                activeOverlay.remove();
+                activeOverlay = null;
+            }
+
+            // Add highlight to text
+            lineElement.classList.add('active');
+
+            // Find coordinates in XML
+            const zoneId = facsId.replace('#', '');
+            // More robust selector for xml:id
+            const zone = persuasionXml.querySelector(`[*|id="${zoneId}"]`) ||
+                persuasionXml.querySelector(`zone[xml\\:id="${zoneId}"]`) ||
+                persuasionXml.getElementById(zoneId);
+
+            if (zone && zone.getAttribute('points')) {
+                const pointsStr = zone.getAttribute('points');
+                drawHighlight(pointsStr);
+            } else {
+                console.warn(`No zone found for ${zoneId}`);
+            }
+        }
+
+        function drawHighlight(pointsStr) {
+            // Remove previous overlay if it exists
+            if (activeOverlay) activeOverlay.remove();
+
+            // Create SVG overlay
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.setAttribute("class", "manuscript-overlay");
+
+            // Position SVG exactly over the rendered image
+            // We use offsetLeft/Top/Width/Height which represent the displayed dimensions
+            svg.style.position = 'absolute';
+            svg.style.left = `${manuscriptImg.offsetLeft}px`;
+            svg.style.top = `${manuscriptImg.offsetTop}px`;
+            svg.style.width = `${manuscriptImg.clientWidth}px`;
+            svg.style.height = `${manuscriptImg.clientHeight}px`;
+
+            // The viewBox should match the NATURAL dimensions of the original XML coordinates
+            svg.setAttribute("viewBox", `0 0 ${manuscriptImg.naturalWidth} ${manuscriptImg.naturalHeight}`);
+
+            const polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+            polygon.setAttribute("points", pointsStr.replace(/,/g, ' '));
+            polygon.setAttribute("class", "highlight-zone");
+
+            svg.appendChild(polygon);
+            manuscriptImg.parentElement.appendChild(svg);
+            activeOverlay = svg;
+        }
+
+        function renderTranscription(facsId) {
+            if (!persuasionXml || !persuasionXsl) return '<p class="loading-msg">Loading digital transcription...</p>';
+
+            try {
+                const processor = new XSLTProcessor();
+                processor.importStylesheet(persuasionXsl);
+                processor.setParameter(null, 'pageFacs', facsId);
+
+                const resultDoc = processor.transformToFragment(persuasionXml, document);
+                if (!resultDoc) throw new Error("Transformation failed");
+
+                const tempDiv = document.createElement('div');
+                tempDiv.appendChild(resultDoc);
+                return tempDiv.innerHTML;
+            } catch (e) {
+                console.error("XSLT Transformation Error:", e);
+                return '<p class="error-msg">Transformation error. Check console for details.</p>';
+            }
+        }
 
         function updateManuscriptPage() {
             manuscriptImg.style.opacity = 0;
             transcriptionText.style.opacity = 0;
 
+            // Clear previous highlight
+            if (activeOverlay) {
+                activeOverlay.remove();
+                activeOverlay = null;
+            }
+
             setTimeout(() => {
                 const data = manuscriptPages[currentManuscriptPage];
                 manuscriptImg.src = data.img;
-                transcriptionText.innerHTML = data.transcription;
+
+                transcriptionText.innerHTML = renderTranscription(data.facs);
+                transcriptionText.scrollTop = 0;
+
                 if (pageNumDisplay) pageNumDisplay.innerText = data.pageNum;
 
                 manuscriptImg.style.opacity = 1;
@@ -141,7 +243,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (manuscriptPrevBtn) manuscriptPrevBtn.disabled = currentManuscriptPage === 0;
                 if (manuscriptNextBtn) manuscriptNextBtn.disabled = currentManuscriptPage === manuscriptPages.length - 1;
+
+                // Match heights once image is loaded
+                if (manuscriptImg.complete) {
+                    adjustTranscriptionHeight();
+                } else {
+                    manuscriptImg.onload = adjustTranscriptionHeight;
+                }
             }, 300);
+        }
+
+        function adjustTranscriptionHeight() {
+            const box = document.querySelector('.transcription-box');
+            // Match the height of the image as displayed on screen
+            if (box && manuscriptImg.complete && manuscriptImg.clientHeight > 0) {
+                const rect = manuscriptImg.getBoundingClientRect();
+                box.style.height = `${rect.height}px`;
+            } else if (box) {
+                // Fallback if image not ready
+                box.style.height = 'auto';
+                box.style.maxHeight = '80vh';
+            }
         }
 
         if (manuscriptPrevBtn) {
@@ -162,7 +284,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        updateManuscriptPage();
+        initTranscription();
+        window.addEventListener('resize', adjustTranscriptionHeight);
     }
 
     /* --- Annotation Comparison Viewer (Annotation Page) --- */
