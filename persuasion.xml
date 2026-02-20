@@ -3,8 +3,8 @@
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
-				<title type='work' ref='https://www.wikidata.org/entity/Q333179'>Persuasion</title>
-                <title type='expression'>Digital Diplomatic Edition of Jane Austen's draft manuscripts</title>
+				<title type='work' ref='https://boloicoms.github.io/semantic-austen/persuasion#work'>Persuasion</title>
+                <title type='expression' ref='https://boloicoms.github.io/semantic-austen/persuasion'>Digital Diplomatic Edition of Jane Austen's draft manuscripts</title>
                 <author ref='#JA'>Jane Austen</author>
                 <respStmt>
                     <resp>compiled by</resp>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head prefix="dcterms: http://purl.org/dc/terms/ owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# schema: https://schema.org/" about="https://boloicoms.github.io/semantic-austen/persuasion">
+<head
+    prefix="dcterms: http://purl.org/dc/terms/ owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# schema: https://schema.org/"
+    about="https://boloicoms.github.io/semantic-austen/persuasion">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persuasion | Semantic Austen</title>
     <meta name="description" content="Explore the digital edition of Jane Austen's Persuasion.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
@@ -38,16 +40,13 @@
     <main class="container fade-in">
         <section class="hero">
             <h1>Persuasion</h1>
-            <p class="subtitle">Digital edition of Jane Austen's final completed novel.</p>
         </section>
 
         <!-- Manuscript & Transcription Viewer -->
         <section class="viewer-container">
             <div class="manuscript-viewer">
                 <div class="manuscript-image-wrapper">
-                    <img id="manuscript-img"
-                        src="/Users/nicoldamelio/.gemini/antigravity/brain/c2bd0908-3cc1-43ee-9340-ba463be8e260/manuscript_page_1_v1_1771002497705.png"
-                        alt="Manuscript Page">
+                    <img id="manuscript-img" src="img/persuasion/p.1.jpg" alt="Manuscript Page">
                 </div>
                 <div class="page-controls">
                     <button id="prev-btn" class="btn-page" disabled>
@@ -76,8 +75,9 @@
                     </p>
                 </div>
                 <div class="viewer-actions">
-                    <a href="#" class="btn-action btn-xml">
-                        <i class="fas fa-download"></i> Download TEI-XML
+                    <a href="https://github.com/boloICOMs/semantic-austen/blob/main/persuasion.xml"
+                        class="btn-action btn-xml">
+                        <i class="fas fa-download"></i> Download XML/TEI
                     </a>
                 </div>
             </div>
@@ -89,36 +89,55 @@
             <div class="metadata-list">
                 <div class="metadata-item">
                     <span class="metadata-label">Title</span>
-                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work" property="dcterms:title" datatype="xsd:string">Persuasion</span>
+                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work"
+                        property="dcterms:title" datatype="xsd:string">Persuasion</span>
                 </div>
                 <div class="metadata-item">
                     <span class="metadata-label">Author</span>
-                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work" property="dcterms:creator" resource="https://boloicoms.github.io/semantic-austen/JA">Jane Austen</span>
+                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work"
+                        property="dcterms:creator" resource="https://boloicoms.github.io/semantic-austen/JA">Jane
+                        Austen</span>
                 </div>
                 <div class="metadata-item">
                     <span class="metadata-label">Publication Date</span>
-                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work" property="dcterms:issued" content="1817" datatype="xsd:gYear">1817 (Posthumous)</span>
+                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work"
+                        property="dcterms:issued" content="1817" datatype="xsd:gYear">1817 (Posthumous)</span>
                 </div>
                 <div class="metadata-item">
                     <span class="metadata-label">Genre</span>
-                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work" property="dcterms:type" resource="https://www.wikidata.org/entity/Q738473">Romance</span>
+                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work"
+                        property="dcterms:type" resource="https://www.wikidata.org/entity/Q738473">Romance</span>
                 </div>
                 <div class="metadata-item">
                     <span class="metadata-label">Language</span>
-                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work" property="dcterms:language" resource="https://www.wikidata.org/entity/Q1860">English</span>
+                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work"
+                        property="dcterms:language" resource="https://www.wikidata.org/entity/Q1860">English</span>
                 </div>
                 <div class="metadata-item">
                     <span class="metadata-label">Publication Place</span>
-                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work" property="schema:locationCreated" resource="https://sws.geonames.org/2635167">United Kingdom</span>
+                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#work"
+                        property="schema:locationCreated" resource="https://sws.geonames.org/2635167">United
+                        Kingdom</span>
                 </div>
                 <div class="metadata-item">
                     <span class="metadata-label">Manuscript ID</span>
-                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#manuscript" property="dcterms:identifier" datatype="xsd:string">MS. Egerton 3038</span>
+                    <span class="metadata-value"
+                        about="https://boloicoms.github.io/semantic-austen/persuasion#manuscript"
+                        property="dcterms:identifier" datatype="xsd:string">MS. Egerton 3038</span>
                 </div>
                 <div class="metadata-item">
                     <span class="metadata-label">Manuscript Source</span>
-                    <span class="metadata-value" about="https://boloicoms.github.io/semantic-austen/persuasion#manuscript" property="dcterms:source" resource="https://www.wikidata.org/entity/Q23308">British Library</span>
+                    <span class="metadata-value"
+                        about="https://boloicoms.github.io/semantic-austen/persuasion#manuscript"
+                        property="dcterms:source" resource="https://www.wikidata.org/entity/Q23308">British
+                        Library</span>
                 </div>
+            </div>
+            <div class="metadata-actions">
+                <a href="https://github.com/boloICOMs/semantic-austen/blob/main/knowledgegraph.ttl"
+                    class="btn-action btn-xml" target="_blank">
+                    <i class="fas fa-download"></i> Download (TTL)
+                </a>
             </div>
         </section>
 
@@ -265,8 +284,15 @@
                 <i class="fa-brands fa-github"></i>
             </a>
             <p class="copyright">&copy; 2026 Semantic Austen</p>
-            <p class="license-text">This digital library is an academic prototype developed for educational purposes. <br>
-                Manuscript facsimiles are courtesy of the <a href="https://www.bl.uk/terms#websites%20and%20online%20services">British Library</a> and the <a href="https://digital.bodleian.ox.ac.uk/terms/">Bodleian Library</a>. Transcriptions are based on the <a href="https://janeausten.ac.uk/index.html">Jane Austen’s Fiction Manuscripts</a> digital edition (ed. Kathryn Sutherland, 2010). <br> This material is used under Fair Use guidelines for non-commercial research. All rights to the diplomatic encoding remain with the original authors.</p>
+            <p class="license-text">This digital library is an academic prototype developed for educational purposes.
+                <br>
+                Manuscript facsimiles are courtesy of the <a
+                    href="https://www.bl.uk/terms#websites%20and%20online%20services">British Library</a> and the <a
+                    href="https://digital.bodleian.ox.ac.uk/terms/">Bodleian Library</a>. Transcriptions are based on
+                the <a href="https://janeausten.ac.uk/index.html">Jane Austen’s Fiction Manuscripts</a> digital edition
+                (ed. Kathryn Sutherland, 2010). <br> This material is used under Fair Use guidelines for non-commercial
+                research. All rights to the diplomatic encoding remain with the original authors.
+            </p>
         </div>
     </footer>
 

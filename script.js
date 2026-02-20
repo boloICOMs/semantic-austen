@@ -255,15 +255,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function adjustTranscriptionHeight() {
             const box = document.querySelector('.transcription-box');
-            // Match the height of the image as displayed on screen
-            if (box && manuscriptImg.complete && manuscriptImg.clientHeight > 0) {
-                const rect = manuscriptImg.getBoundingClientRect();
-                box.style.height = `${rect.height}px`;
+            const wrapper = document.querySelector('.manuscript-image-wrapper');
+            // Match the height of the image wrapper as displayed on screen
+            if (box && wrapper && manuscriptImg.complete) {
+                const rect = wrapper.getBoundingClientRect();
+                if (rect.height > 0) {
+                    box.style.height = `${rect.height}px`;
+                }
             } else if (box) {
                 // Fallback if image not ready
                 box.style.height = 'auto';
                 box.style.maxHeight = '80vh';
             }
+        }
+
+        // Use ResizeObserver for more robust height matching
+        const resizeObserver = new ResizeObserver(entries => {
+            adjustTranscriptionHeight();
+        });
+
+        const imageWrapper = document.querySelector('.manuscript-image-wrapper');
+        if (imageWrapper) {
+            resizeObserver.observe(imageWrapper);
         }
 
         if (manuscriptPrevBtn) {

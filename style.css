@@ -154,9 +154,16 @@ body {
     box-shadow: 0 10px 30px rgba(168, 184, 207, 0.2);
 }
 
-.item-page .metadata-label,
+.item-page .metadata-label {
+    color: var(--brand-navy);
+}
+
 .item-page .metadata-value {
     color: var(--brand-navy);
+    text-align: right !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center;
 }
 
 .item-page .metadata-item {
@@ -853,8 +860,8 @@ footer {
     display: flex;
     gap: 40px;
     margin: 20px 0 40px;
-    align-items: stretch;
-    /* Both children will stretch to the same height */
+    align-items: flex-start;
+    /* Prevent children from automatically stretching to matching height */
 }
 
 .manuscript-viewer {
@@ -916,9 +923,15 @@ footer {
     background-color: white;
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 43, 78, 0.05);
-    border: 1px solid rgba(0, 43, 78, 0.1);
     color: var(--brand-navy);
+    margin-top: 20px;
+    /* Match the 20px padding in .manuscript-viewer */
+    /* Use border-box to include padding/borders in the assigned height */
+    box-sizing: border-box;
+    /* Remove borders if they create visual mismatch, or ensure they are accounted for */
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 43, 78, 0.05);
+    /* Keep shadow for definition */
     /* Match the image wrapper height and scroll text inside */
     overflow-y: auto;
     display: flex;
@@ -973,6 +986,8 @@ footer {
     text-underline-offset: 4px;
 }
 
+/* Moved to .metadata-actions scoping below */
+
 
 /* Metadata Section */
 .metadata-section {
@@ -1009,9 +1024,46 @@ footer {
     flex: 1;
 }
 
-.metadata-value {
+.metadata-item .metadata-value {
     flex: 2;
     color: var(--brand-navy);
+    text-align: right !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center;
+}
+
+.metadata-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.metadata-actions .btn-action {
+    flex: none;
+    width: fit-content;
+    padding: 12px 24px;
+    position: relative;
+}
+
+.metadata-actions .btn-action:hover {
+    background-color: transparent;
+    color: var(--brand-navy);
+}
+
+.metadata-actions .btn-action::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--action-red);
+    transition: width 0.3s ease;
+}
+
+.metadata-actions .btn-action:hover::after {
+    width: 100%;
 }
 
 /* Media Carousel */

@@ -73,7 +73,7 @@
         <xsl:variable name="link" select="$entity/@sameAs"/>
         <xsl:choose>
             <xsl:when test="$link">
-                <a href="{$link}" target="_blank" class="entity-link" title="{normalize-space($entity)}">
+                <a href="https://github.com/boloICOMs/semantic-austen/blob/main/knowledgegraph.ttl" target="_blank" class="entity-link" title="{normalize-space($entity)}">
                     <xsl:apply-templates/>
                 </a>
             </xsl:when>
