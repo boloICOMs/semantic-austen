@@ -690,8 +690,19 @@ class GuideManager {
         const rect = targetEl.getBoundingClientRect();
         const pos = step.position(rect);
 
+        // Position clamping to keep within viewport
+        const margin = 15;
+        const popupWidth = 280; // Match max-width in CSS
+        let finalLeft = pos.left;
+
+        if (finalLeft < margin) {
+            finalLeft = margin;
+        } else if (finalLeft + popupWidth > window.innerWidth - margin) {
+            finalLeft = window.innerWidth - popupWidth - margin;
+        }
+
         popup.style.top = `${pos.top + window.scrollY}px`;
-        popup.style.left = `${pos.left + window.scrollX}px`;
+        popup.style.left = `${finalLeft + window.scrollX}px`;
 
         let contentHtml = `
             <button class="guide-close" id="guide-close-btn" aria-label="Close guide">×</button>
@@ -749,8 +760,19 @@ class GuideManager {
         const rect = targetEl.getBoundingClientRect();
         const pos = step.position(rect);
 
+        // Position clamping to keep within viewport
+        const margin = 15;
+        const popupWidth = 280; // Match max-width in CSS
+        let finalLeft = pos.left;
+
+        if (finalLeft < margin) {
+            finalLeft = margin;
+        } else if (finalLeft + popupWidth > window.innerWidth - margin) {
+            finalLeft = window.innerWidth - popupWidth - margin;
+        }
+
         popup.style.top = `${pos.top + window.scrollY}px`;
-        popup.style.left = `${pos.left + window.scrollX}px`;
+        popup.style.left = `${finalLeft + window.scrollX}px`;
     }
 
     removePopup() {
